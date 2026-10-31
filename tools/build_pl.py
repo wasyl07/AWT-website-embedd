@@ -23,8 +23,8 @@ HEAD_PL = {
                    "testy i produkcja małoseryjna oraz zdalne aktualizacje i monitoring. "
                    "Jeden partner od pomysłu do gotowego produktu.",
     "og_title": "Projektowanie elektroniki i systemów wbudowanych — AWT",
-    "og_description": "Od pomysłu do działającego urządzenia — projekt, prototyp, testy, "
-                      "produkcja i utrzymanie u jednego partnera.",
+    "og_description": "Projekt, prototyp, testy, produkcja i utrzymanie urządzeń "
+                      "elektronicznych — jeden wykonawca od koncepcji do gotowego produktu.",
 }
 
 
