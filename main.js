@@ -205,7 +205,7 @@
 
   const note = document.getElementById("form-note");
 
-  // Theme: light / dark. Initial value is set inline in <head>; follows the OS until the user picks one.
+  // Theme: light / dark. Light by default (set inline in <head>); dark only if the visitor picks it.
   const root = document.documentElement;
   const themeBtn = document.getElementById("theme-toggle");
   function updateThemeLabel() {
@@ -217,11 +217,6 @@
     root.dataset.theme = root.dataset.theme === "dark" ? "light" : "dark";
     try { localStorage.setItem("awt-theme", root.dataset.theme); } catch {}
     updateThemeLabel();
-  });
-  matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e) => {
-    let saved = null;
-    try { saved = localStorage.getItem("awt-theme"); } catch {}
-    if (!saved) { root.dataset.theme = e.matches ? "dark" : "light"; updateThemeLabel(); }
   });
   document.querySelectorAll("[data-lang]").forEach((b) =>
     b.addEventListener("click", () => setLang(b.dataset.lang)));
