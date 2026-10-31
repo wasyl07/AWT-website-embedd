@@ -27,8 +27,8 @@ Deploy: any static host (GitHub Pages, Netlify, Cloudflare Pages, nginx).
 Live address: https://www.awt-embedded.com (also set in `index.html`,
 `privacy.html`, `robots.txt`, `sitemap.xml`).
 
-Before launch:
+Notes:
 
-- Fill in the business name, NIP and address in the footer of `index.html`
-  and in both language versions of `privacy.html` (search for `0000000000`).
+- Business name, NIP and address appear in the footer of `index.html`
+  and in both language versions of `privacy.html`.
 - If you add analytics or a form service later, update `privacy.html`.
