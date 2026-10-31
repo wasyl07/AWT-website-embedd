@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AWT — Embedded Systems Engineering</title>
-  <meta name="description" content="AWT develops embedded hardware, firmware and device drivers, runs assembly production, tests every board and operates OTA update and telemetry infrastructure for devices in the field.">
+  <title>AWT — Electronic Product Development</title>
+  <meta name="description" content="AWT takes electronic products end to end: from understanding your problem, through design, development, testing and production, to keeping devices updated and monitored in the field.">
   <meta name="color-scheme" content="light dark">
   <script>
     // set theme before first paint
@@ -12,9 +12,20 @@
     document.documentElement.dataset.theme = t || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
   </script>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="preload" href="fonts/ibm-plex-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <!-- Replace https://YOUR-DOMAIN with the live address before launch (also in robots.txt and sitemap.xml). -->
+  <link rel="canonical" href="https://YOUR-DOMAIN/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="AWT">
+  <meta property="og:title" content="AWT — Electronic Product Development">
+  <meta property="og:description" content="From your problem to a working product — design, development, testing, production and maintenance from one partner.">
+  <meta property="og:url" content="https://YOUR-DOMAIN/">
+  <meta property="og:image" content="https://YOUR-DOMAIN/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:locale:alternate" content="pl_PL">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -29,14 +40,15 @@
         </svg>
         <span class="brand__text">
           <span class="brand__name">AWT</span>
-          <span class="brand__sub" data-i18n="brand">Embedded Systems</span>
+          <span class="brand__sub" data-i18n="brand">Electronic products</span>
         </span>
       </a>
       <nav class="nav" aria-label="Main">
+        <a href="#why" data-i18n="nav.why">Why AWT</a>
         <a href="#services" data-i18n="nav.services">Services</a>
         <a href="#projects" data-i18n="nav.projects">Projects</a>
-        <a href="#technology" data-i18n="nav.tech">Technology</a>
-        <a href="#process" data-i18n="nav.process">Process</a>
+        <a href="#process" data-i18n="nav.process">How we work</a>
+        <a href="#faq" data-i18n="nav.faq">FAQ</a>
       </nav>
       <div class="topbar__tools">
         <button class="iconbtn" type="button" id="theme-toggle" aria-label="Toggle dark mode">
@@ -57,23 +69,24 @@
     <section class="hero" id="top">
       <div class="wrap hero__grid">
         <div class="hero__copy">
-          <p class="kicker" data-i18n="hero.kicker">Embedded systems engineering · Poland</p>
-          <h1 data-i18n="hero.title">Electronics development, production and field support from one engineering partner.</h1>
-          <p class="lede" data-i18n="hero.lede">AWT designs embedded hardware and firmware, manufactures and tests it in series, and operates the infrastructure that keeps devices updated and reporting after they ship.</p>
+          <p class="kicker" data-i18n="hero.kicker">Electronic product development · Poland</p>
+          <h1 data-i18n="hero.title">From your problem to a working product — and support long after it ships.</h1>
+          <p class="lede" data-i18n="hero.lede">AWT takes your device end to end. We start by understanding the problem you need to solve, then design, develop, test and produce it, and keep it updated and monitored once it is in your customers' hands. One partner for the whole journey, so you can focus on your business instead of managing suppliers.</p>
           <div class="hero__actions">
-            <a class="btn btn--primary" href="#contact" data-i18n="hero.cta">Request a quote</a>
-            <a class="btn btn--line" href="#services" data-i18n="hero.cta2">Our services</a>
+            <a class="btn btn--primary" href="#contact" data-i18n="hero.cta">Talk about your project</a>
+            <a class="btn btn--line" href="#why" data-i18n="hero.cta2">See how we help</a>
           </div>
         </div>
 
-        <nav class="lifecycle" aria-label="Product lifecycle">
-          <p class="lifecycle__title" data-i18n="lc.title">Product lifecycle coverage</p>
+        <nav class="lifecycle" aria-label="End-to-end journey">
+          <p class="lifecycle__title" data-i18n="lc.title">One partner, end to end</p>
           <ol>
-            <li><a href="#svc-dev"><span class="lc__no">01</span><span class="lc__name" data-i18n="lc.1">Design</span><span class="lc__desc" data-i18n="lc.1d">Hardware, firmware and drivers</span></a></li>
-            <li><a href="#svc-prod"><span class="lc__no">02</span><span class="lc__name" data-i18n="lc.2">Build</span><span class="lc__desc" data-i18n="lc.2d">Assembly and production runs</span></a></li>
-            <li><a href="#svc-test"><span class="lc__no">03</span><span class="lc__name" data-i18n="lc.3">Test</span><span class="lc__desc" data-i18n="lc.3d">End-of-line testing of every unit</span></a></li>
-            <li><a href="#svc-ota"><span class="lc__no">04</span><span class="lc__name" data-i18n="lc.4">Update</span><span class="lc__desc" data-i18n="lc.4d">Hosted OTA firmware delivery</span></a></li>
-            <li><a href="#svc-tel"><span class="lc__no">05</span><span class="lc__name" data-i18n="lc.5">Monitor</span><span class="lc__desc" data-i18n="lc.5d">Fleet telemetry and alerting</span></a></li>
+            <li><a href="#process"><span class="lc__no">01</span><span class="lc__name" data-i18n="lc.1">Your problem</span><span class="lc__desc" data-i18n="lc.1d">We listen and help define what's needed</span></a></li>
+            <li><a href="#svc-dev"><span class="lc__no">02</span><span class="lc__name" data-i18n="lc.2">Design</span><span class="lc__desc" data-i18n="lc.2d">A clear plan for the device and its electronics</span></a></li>
+            <li><a href="#svc-dev"><span class="lc__no">03</span><span class="lc__name" data-i18n="lc.3">Development</span><span class="lc__desc" data-i18n="lc.3d">A working prototype you can try</span></a></li>
+            <li><a href="#svc-test"><span class="lc__no">04</span><span class="lc__name" data-i18n="lc.4">Testing</span><span class="lc__desc" data-i18n="lc.4d">Every unit checked before it ships</span></a></li>
+            <li><a href="#svc-prod"><span class="lc__no">05</span><span class="lc__name" data-i18n="lc.5">Production</span><span class="lc__desc" data-i18n="lc.5d">Finished units, ready to use</span></a></li>
+            <li><a href="#svc-ota"><span class="lc__no">06</span><span class="lc__name" data-i18n="lc.6">Maintenance</span><span class="lc__desc" data-i18n="lc.6d">Remote updates and monitoring in the field</span></a></li>
           </ol>
         </nav>
       </div>
@@ -82,36 +95,66 @@
     <!-- COMMITMENTS STRIP -->
     <section class="strip" aria-label="Commitments">
       <div class="wrap strip__grid">
-        <div><p class="strip__h" data-i18n="c1.h">Full IP transfer</p><p data-i18n="c1.p">Source code, schematics and design files belong to the client.</p></div>
-        <div><p class="strip__h" data-i18n="c2.h">Documented testing</p><p data-i18n="c2.p">Every manufactured unit is tested and has a recorded result.</p></div>
-        <div><p class="strip__h" data-i18n="c3.h">Fixed-price milestones</p><p data-i18n="c3.p">Written scope, milestones and cost agreed before work starts.</p></div>
-        <div><p class="strip__h" data-i18n="c4.h">Long-term support</p><p data-i18n="c4.p">Hosting, maintenance and firmware updates after delivery.</p></div>
+        <div><p class="strip__h" data-i18n="c1.h">You own everything</p><p data-i18n="c1.p">All code and design files are yours to keep.</p></div>
+        <div><p class="strip__h" data-i18n="c2.h">No surprise costs</p><p data-i18n="c2.p">Price agreed in writing before work starts.</p></div>
+        <div><p class="strip__h" data-i18n="c3.h">Quality you can prove</p><p data-i18n="c3.p">Every unit tested, every result recorded.</p></div>
+        <div><p class="strip__h" data-i18n="c4.h">We stay after launch</p><p data-i18n="c4.p">Updates, hosting and maintenance included on request.</p></div>
+      </div>
+    </section>
+
+    <!-- TRUSTED BY -->
+    <section class="trusted" aria-labelledby="trusted-h">
+      <div class="wrap trusted__inner">
+        <p class="trusted__h" id="trusted-h" data-i18n="trusted.h">Trusted by</p>
+        <ul class="trusted__list">
+          <li>Omni3D</li>
+          <li>LemPro</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- WHY -->
+    <section class="section" id="why">
+      <div class="wrap">
+        <header class="section__head">
+          <p class="eyebrow" data-i18n="why.eyebrow">Why AWT</p>
+          <h2 data-i18n="why.title">Building a device is hard. We make it simpler.</h2>
+          <p class="section__intro" data-i18n="why.intro">Most companies with an idea for a device run into the same problems. Here is how we solve them.</p>
+        </header>
+        <div class="pains">
+          <article class="pain"><h3 data-i18n="w1.h">“I have an idea, but no engineering team.”</h3><p data-i18n="w1.p">We take it from a rough description to a working device. You don't need a technical specification — we help you write one.</p></article>
+          <article class="pain"><h3 data-i18n="w2.h">“I'm juggling designers, factories and IT suppliers.”</h3><p data-i18n="w2.p">Design, development, testing, production and support all come from one partner. One contact person, no finger-pointing between vendors.</p></article>
+          <article class="pain"><h3 data-i18n="w3.h">“I'm worried faulty units will reach my customers.”</h3><p data-i18n="w3.p">Every unit is checked before it leaves, and the result is recorded — so you know exactly what you are shipping.</p></article>
+          <article class="pain"><h3 data-i18n="w4.h">“Fixing a bug means recalling devices.”</h3><p data-i18n="w4.p">With remote updates you can fix and improve devices that are already with your customers — safely, without site visits.</p></article>
+          <article class="pain"><h3 data-i18n="w5.h">“I don't know how my devices behave in the field.”</h3><p data-i18n="w5.p">Live data and alerts let you spot a problem before a customer calls about it.</p></article>
+          <article class="pain"><h3 data-i18n="w6.h">“I don't want to be locked in to one supplier.”</h3><p data-i18n="w6.p">All designs and code are handed over to you. You are free to take them anywhere, at any time.</p></article>
+        </div>
       </div>
     </section>
 
     <!-- SERVICES -->
-    <section class="section" id="services">
+    <section class="section section--alt" id="services">
       <div class="wrap">
         <header class="section__head">
           <p class="eyebrow" data-i18n="services.eyebrow">Services</p>
-          <h2 data-i18n="services.title">Engineering, manufacturing and operations for embedded products.</h2>
-          <p class="section__intro" data-i18n="services.intro">Each service can be contracted on its own, or combined to take a product from concept to a maintained fleet in the field.</p>
+          <h2 data-i18n="services.title">What we can do for you.</h2>
+          <p class="section__intro" data-i18n="services.intro">Use us for the whole journey or just the step you need. Every service works on its own, and together they take your product from idea to devices in your customers' hands.</p>
         </header>
 
         <div class="services">
           <article class="service" id="svc-dev">
             <p class="service__no">01</p>
             <div>
-              <h3 data-i18n="s1.title">Embedded development</h3>
-              <p data-i18n="s1.text">Firmware for microcontrollers and embedded Linux, electronics design and board bring-up. Complete product development from concept to validated prototype, or specialist support for an existing engineering team.</p>
+              <h3 data-i18n="s1.title">Design and development</h3>
+              <p class="service__pitch" data-i18n="s1.pitch">Turn your idea into a working device.</p>
+              <p data-i18n="s1.text">We design the electronics and the software that runs inside them, and build prototypes you can test, show to investors or put in front of customers. Already have a team? We can join them for the difficult parts.</p>
             </div>
             <ul class="deliv">
-              <li data-i18n="s1.t1">Firmware in C, C++ and Rust</li>
-              <li data-i18n="s1.t2">Zephyr, FreeRTOS, bare-metal</li>
-              <li data-i18n="s1.t3">Schematic and PCB design</li>
-              <li data-i18n="s1.t4">Board bring-up</li>
-              <li data-i18n="s1.t5">BLE, CAN and wired interfaces</li>
-              <li data-i18n="s1.t6">Embedded Linux (Buildroot)</li>
+              <li data-i18n="s1.t1">From a rough idea to a working prototype</li>
+              <li data-i18n="s1.t2">Electronics and circuit board design</li>
+              <li data-i18n="s1.t3">Software that runs on the device</li>
+              <li data-i18n="s1.t4">Wireless and wired connectivity, e.g. Bluetooth</li>
+              <li data-i18n="s1.t5">Support for your existing team</li>
             </ul>
           </article>
 
@@ -119,75 +162,79 @@
             <p class="service__no">02</p>
             <div>
               <h3 data-i18n="s6.title">Device drivers</h3>
-              <p data-i18n="s6.text">Drivers for sensors, displays, radios, memories and other peripherals — written to order for your hardware and platform, or sourced from an existing commercial or open-source driver library and integrated into your project. Either way, you receive documentation, an example application and tests run on real hardware.</p>
+              <p class="service__pitch" data-i18n="s6.pitch">Make every part of your device work together.</p>
+              <p data-i18n="s6.text">Each chip in a device — a sensor, a screen, a radio — needs a small piece of software to talk to the rest of the system. We write it for you, or find a proven ready-made one, whichever saves you more time and money.</p>
               <div class="options">
-                <div><p class="options__h" data-i18n="s6.o1">Custom development</p><p data-i18n="s6.o1d">A new driver for your chip, bus and RTOS, with full source code ownership.</p></div>
-                <div><p class="options__h" data-i18n="s6.o2">Sourced from a library</p><p data-i18n="s6.o2d">We select, purchase and integrate a proven ready-made driver — shorter lead time and lower cost.</p></div>
+                <div><p class="options__h" data-i18n="s6.o1">Built for you</p><p data-i18n="s6.o1d">Made to fit your hardware exactly, and the code is fully yours.</p></div>
+                <div><p class="options__h" data-i18n="s6.o2">Ready-made and proven</p><p data-i18n="s6.o2d">We pick, buy and integrate an existing solution — faster and cheaper.</p></div>
               </div>
             </div>
             <ul class="deliv">
-              <li data-i18n="s6.t1">Sensors, displays, memories, radios</li>
-              <li data-i18n="s6.t2">I²C, SPI, UART, CAN, USB</li>
-              <li data-i18n="s6.t3">Zephyr, FreeRTOS, bare-metal, Linux</li>
-              <li data-i18n="s6.t4">Documentation and example code</li>
-              <li data-i18n="s6.t5">Tested on real hardware</li>
-            </ul>
-          </article>
-
-          <article class="service" id="svc-prod">
-            <p class="service__no">03</p>
-            <div>
-              <h3 data-i18n="s5.title">Assembly and production runs</h3>
-              <p data-i18n="s5.text">Small and medium series manufacturing: component sourcing, PCB assembly, programming and testing. Units are delivered finished, verified and ready for final integration.</p>
-            </div>
-            <ul class="deliv">
-              <li data-i18n="s5.t1">Component sourcing</li>
-              <li data-i18n="s5.t2">PCB assembly</li>
-              <li data-i18n="s5.t3">Prototype to series</li>
-              <li data-i18n="s5.t4">Programmed, tested units</li>
+              <li data-i18n="s6.t1">Sensors, screens, memory, wireless modules</li>
+              <li data-i18n="s6.t2">Documentation and examples included</li>
+              <li data-i18n="s6.t3">Proven on real hardware</li>
             </ul>
           </article>
 
           <article class="service" id="svc-test">
-            <p class="service__no">04</p>
+            <p class="service__no">03</p>
             <div>
-              <h3 data-i18n="s2.title">Equipment and production testing</h3>
-              <p data-i18n="s2.text">Testing of post-production boards — whether manufactured by AWT or by your contract manufacturer. Custom fixtures and test software flash each unit, exercise its I/O and interfaces and record a pass/fail result.</p>
+              <h3 data-i18n="s2.title">Testing</h3>
+              <p class="service__pitch" data-i18n="s2.pitch">Catch faults before your customers do.</p>
+              <p data-i18n="s2.text">Whether we built your boards or another factory did, we check every one on test equipment designed for your product. Each unit gets a recorded pass or fail, so you know exactly what you are shipping.</p>
             </div>
             <ul class="deliv">
-              <li data-i18n="s2.t0">Post-production board testing</li>
-              <li data-i18n="s2.t1">Pogo-pin test fixtures</li>
-              <li data-i18n="s2.t2">Automated test software</li>
-              <li data-i18n="s2.t3">End-of-line programming</li>
-              <li data-i18n="s2.t4">Validation and stress testing</li>
+              <li data-i18n="s2.t1">Every unit checked</li>
+              <li data-i18n="s2.t2">Test equipment made for your product</li>
+              <li data-i18n="s2.t3">Boards from any manufacturer</li>
+              <li data-i18n="s2.t4">A recorded result for every unit</li>
+              <li data-i18n="s2.t5">Durability and stress testing</li>
+            </ul>
+          </article>
+
+          <article class="service" id="svc-prod">
+            <p class="service__no">04</p>
+            <div>
+              <h3 data-i18n="s5.title">Production</h3>
+              <p class="service__pitch" data-i18n="s5.pitch">From the first prototype to a full production batch.</p>
+              <p data-i18n="s5.text">Small and medium batches: we buy the parts, assemble the boards, load the software and test everything. You receive finished units, ready to go into your product.</p>
+            </div>
+            <ul class="deliv">
+              <li data-i18n="s5.t1">We source all components</li>
+              <li data-i18n="s5.t2">Assembly and programming</li>
+              <li data-i18n="s5.t3">Small and medium batches</li>
+              <li data-i18n="s5.t4">Delivered ready to use</li>
             </ul>
           </article>
 
           <article class="service" id="svc-ota">
             <p class="service__no">05</p>
             <div>
-              <h3 data-i18n="s3.title">Hosted update server (OTA)</h3>
-              <p data-i18n="s3.text">Firmware delivery infrastructure for devices in the field, together with the secure bootloader on the device. Releases are signed, rolled out in stages and automatically reverted if an update fails.</p>
+              <h3 data-i18n="s3.title">Remote updates</h3>
+              <p class="service__pitch" data-i18n="s3.pitch">Keep improving devices after they ship.</p>
+              <p data-i18n="s3.text">Fix bugs and add features to devices already in your customers' hands — no recalls, no site visits. Updates are protected against tampering, released gradually and undone automatically if something goes wrong. We host and maintain the system for you.</p>
             </div>
             <ul class="deliv">
-              <li data-i18n="s3.t1">Signed images (MCUboot)</li>
-              <li data-i18n="s3.t2">Staged rollouts</li>
-              <li data-i18n="s3.t3">Automatic rollback</li>
-              <li data-i18n="s3.t4">Hosting and maintenance</li>
+              <li data-i18n="s3.t1">No recalls or site visits</li>
+              <li data-i18n="s3.t2">Protected against tampering</li>
+              <li data-i18n="s3.t3">Gradual release to limit risk</li>
+              <li data-i18n="s3.t4">Automatic undo if an update fails</li>
+              <li data-i18n="s3.t5">Hosted and maintained by us</li>
             </ul>
           </article>
 
           <article class="service" id="svc-tel">
             <p class="service__no">06</p>
             <div>
-              <h3 data-i18n="s4.title">Telemetry hosting</h3>
-              <p data-i18n="s4.text">Collection, storage and visualisation of fleet data: sensor readings, device health, logs and alerts. Dashboards for your engineering team, service staff or end customers.</p>
+              <h3 data-i18n="s4.title">Device monitoring</h3>
+              <p class="service__pitch" data-i18n="s4.pitch">Know how your devices are doing.</p>
+              <p data-i18n="s4.text">See readings, device health and problems from all your devices in one place, with alerts when something needs attention. Dashboards can be made for your engineers, your service team or your own customers.</p>
             </div>
             <ul class="deliv">
-              <li data-i18n="s4.t1">Ingestion over MQTT / HTTP</li>
-              <li data-i18n="s4.t2">Time-series storage</li>
-              <li data-i18n="s4.t3">Grafana dashboards</li>
-              <li data-i18n="s4.t4">Alerting</li>
+              <li data-i18n="s4.t1">All devices in one view</li>
+              <li data-i18n="s4.t2">Alerts before customers notice</li>
+              <li data-i18n="s4.t3">Dashboards for your team or customers</li>
+              <li data-i18n="s4.t4">Hosted and maintained by us</li>
             </ul>
           </article>
         </div>
@@ -195,75 +242,65 @@
     </section>
 
     <!-- PROJECTS -->
-    <section class="section section--alt" id="projects">
+    <section class="section" id="projects">
       <div class="wrap">
         <header class="section__head">
           <p class="eyebrow" data-i18n="work.eyebrow">Selected projects</p>
-          <h2 data-i18n="work.title">Delivered engineering work.</h2>
+          <h2 data-i18n="work.title">Devices we have already built.</h2>
         </header>
 
         <div class="cases">
           <article class="case case--feature">
             <div class="case__meta">
               <p class="case__sector" data-i18n="p1.kind">In-house product · Test equipment</p>
-              <h3 data-i18n="p1.title">ETS — Embedded Testing Solution</h3>
+              <h3 data-i18n="p1.title">ETS — our own test station</h3>
             </div>
             <div class="case__body">
-              <p data-i18n="p1.text">A pogo-pin test station with desktop software for test-driven firmware development and production testing. It programs the board under test, drives its I/O, runs scripted test sequences and includes an 8-channel logic analyzer and serial console. The same platform is used for AWT's production test services.</p>
+              <p data-i18n="p1.text">A station that checks electronics automatically: it loads software onto each board, runs it through a planned series of checks and reports the result. We use it for our customers' production testing, and it helps us develop and verify device software faster.</p>
               <dl class="case__facts">
-                <div><dt data-i18n="f.scope">Scope</dt><dd data-i18n="p1.scope">Hardware, firmware, desktop application</dd></div>
-                <div><dt data-i18n="f.tech">Technology</dt><dd>Rust · Tauri · React · UDP / USB CDC</dd></div>
+                <div><dt data-i18n="f.scope">Scope</dt><dd data-i18n="p1.scope">Hardware, device software, desktop app</dd></div>
+                <div><dt data-i18n="f.use">For you</dt><dd data-i18n="p1.use">Fast, repeatable testing of your boards</dd></div>
               </dl>
             </div>
           </article>
 
           <article class="case">
             <p class="case__sector" data-i18n="p2.kind">Wearables</p>
-            <h3 data-i18n="p2.title">BLE motion sensor with OTA updates</h3>
-            <p data-i18n="p2.text">Firmware for a battery-powered IMU sensor with a custom BLE protocol, signed over-the-air updates and a Linux hub for data collection and charting.</p>
-            <p class="case__tech">nRF Connect SDK · Zephyr · MCUboot · Python</p>
+            <h3 data-i18n="p2.title">Wireless motion sensor</h3>
+            <p data-i18n="p2.text">A small battery-powered sensor that tracks movement and sends the data over Bluetooth to a hub, where it is collected and charted. Its software can be updated wirelessly and securely.</p>
           </article>
 
           <article class="case">
-            <p class="case__sector" data-i18n="p3.kind">Unmanned aerial systems</p>
-            <h3 data-i18n="p3.title">Flight control board</h3>
-            <p data-i18n="p3.text">BeagleBone cape hardware and a custom Buildroot Linux image running ArduPilot on the AM335x processor.</p>
-            <p class="case__tech">KiCad · AM335x · Buildroot · ArduPilot</p>
+            <p class="case__sector" data-i18n="p3.kind">Drones</p>
+            <h3 data-i18n="p3.title">Drone flight controller</h3>
+            <p data-i18n="p3.text">A custom electronics board and operating system that runs widely used open-source autopilot software.</p>
           </article>
 
           <article class="case">
             <p class="case__sector" data-i18n="p4.kind">Electric vehicles</p>
-            <h3 data-i18n="p4.title">Vehicle electronics</h3>
-            <p data-i18n="p4.text">Battery management, safety circuits, power distribution, dashboard and telemetry modules for an electric race car — hardware and STM32 firmware on a CAN network.</p>
-            <p class="case__tech">STM32 · CAN · KiCad · C++</p>
+            <h3 data-i18n="p4.title">Electric race car electronics</h3>
+            <p data-i18n="p4.text">Battery management, safety circuits, power distribution, the dashboard and live data modules — both the electronics and the software, all connected over one in-car network.</p>
           </article>
 
           <article class="case">
             <p class="case__sector" data-i18n="p5.kind">Industrial automation</p>
             <h3 data-i18n="p5.title">Machine health monitoring</h3>
-            <p data-i18n="p5.text">A containerised system collecting resource usage and logs from industrial Linux machines, detecting hardware faults and validating system changes before production rollout.</p>
-            <p class="case__tech">Linux · Docker · Grafana · Python</p>
+            <p data-i18n="p5.text">A system that watches industrial machines, collects their logs and usage data, spots hardware faults early and checks software changes before they reach the factory floor.</p>
           </article>
         </div>
-      </div>
-    </section>
 
-    <!-- TECHNOLOGY -->
-    <section class="section" id="technology">
-      <div class="wrap tech">
-        <header class="section__head section__head--side">
-          <p class="eyebrow" data-i18n="tech.eyebrow">Technology</p>
-          <h2 data-i18n="tech.title">Platforms and tools we work with.</h2>
-        </header>
-        <dl class="techtable">
-          <div><dt data-i18n="tech.mcu">Microcontrollers</dt><dd>STM32 · Nordic nRF52 / nRF53 · ESP32</dd></div>
-          <div><dt data-i18n="tech.mpu">Application processors</dt><dd>TI AM335x · Embedded Linux (Buildroot)</dd></div>
-          <div><dt data-i18n="tech.rtos">Operating systems</dt><dd>Zephyr / nRF Connect SDK · FreeRTOS · bare-metal</dd></div>
-          <div><dt data-i18n="tech.lang">Languages</dt><dd>C · C++ · Rust · Python</dd></div>
-          <div><dt data-i18n="tech.bus">Interfaces</dt><dd>CAN · BLE · UART · SPI · I²C · USB · Ethernet</dd></div>
-          <div><dt data-i18n="tech.eda">Electronics design</dt><dd>KiCad</dd></div>
-          <div><dt data-i18n="tech.infra">Infrastructure</dt><dd>Linux · Docker · MCUboot · MQTT · Grafana</dd></div>
-        </dl>
+        <details class="techbox" id="technology">
+          <summary data-i18n="tech.summary">For engineers: platforms and tools we work with</summary>
+          <dl class="techtable">
+            <div><dt data-i18n="tech.mcu">Microcontrollers</dt><dd>STM32 · Nordic nRF52 / nRF53 · ESP32</dd></div>
+            <div><dt data-i18n="tech.mpu">Application processors</dt><dd>TI AM335x · Embedded Linux (Buildroot)</dd></div>
+            <div><dt data-i18n="tech.rtos">Operating systems</dt><dd>Zephyr / nRF Connect SDK · FreeRTOS · bare-metal</dd></div>
+            <div><dt data-i18n="tech.lang">Languages</dt><dd>C · C++ · Rust · Python</dd></div>
+            <div><dt data-i18n="tech.bus">Interfaces</dt><dd>CAN · BLE · UART · SPI · I²C · USB · Ethernet</dd></div>
+            <div><dt data-i18n="tech.eda">Electronics design</dt><dd>KiCad</dd></div>
+            <div><dt data-i18n="tech.infra">Infrastructure</dt><dd>Linux · Docker · MCUboot · MQTT · Grafana</dd></div>
+          </dl>
+        </details>
       </div>
     </section>
 
@@ -271,25 +308,42 @@
     <section class="section section--alt" id="process">
       <div class="wrap">
         <header class="section__head">
-          <p class="eyebrow" data-i18n="process.eyebrow">Process</p>
-          <h2 data-i18n="process.title">A defined process from first contact to handover.</h2>
+          <p class="eyebrow" data-i18n="process.eyebrow">How we work</p>
+          <h2 data-i18n="process.title">Easy to work with, from the first call to launch and beyond.</h2>
         </header>
         <ol class="steps">
-          <li><h3 data-i18n="st1.title">Consultation</h3><p data-i18n="st1.text">An initial call, free of charge, to review requirements, existing work and constraints.</p></li>
-          <li><h3 data-i18n="st2.title">Proposal</h3><p data-i18n="st2.text">A written scope with milestones, schedule and cost — fixed price per milestone or time and materials.</p></li>
-          <li><h3 data-i18n="st3.title">Execution</h3><p data-i18n="st3.text">Regular progress reports and a working, testable deliverable at each milestone.</p></li>
-          <li><h3 data-i18n="st4.title">Handover and support</h3><p data-i18n="st4.text">Full transfer of source code, design files and documentation, with optional hosting and maintenance.</p></li>
+          <li><h3 data-i18n="st1.title">Free first call</h3><p data-i18n="st1.text">Tell us the problem you want to solve. No technical specification needed — we'll ask the right questions.</p></li>
+          <li><h3 data-i18n="st2.title">Clear proposal</h3><p data-i18n="st2.text">A written plan with stages, timeline and price. You know the cost before any work starts.</p></li>
+          <li><h3 data-i18n="st3.title">Visible progress</h3><p data-i18n="st3.text">Regular updates, and something working you can try at the end of every stage.</p></li>
+          <li><h3 data-i18n="st4.title">Handover and support</h3><p data-i18n="st4.text">You receive all designs, code and documentation. We can keep hosting, maintaining and updating your devices.</p></li>
         </ol>
       </div>
     </section>
 
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="wrap faq">
+        <header class="section__head section__head--side">
+          <p class="eyebrow" data-i18n="faq.eyebrow">FAQ</p>
+          <h2 data-i18n="faq.title">Common questions.</h2>
+        </header>
+        <div class="faq__list">
+          <details><summary data-i18n="q1">I only have an idea. Is that enough?</summary><p data-i18n="a1">Yes. Many projects start with a sketch or a short description. We help turn it into clear requirements and a plan before anything is built.</p></details>
+          <details><summary data-i18n="q2">Can you help with a project that is already underway?</summary><p data-i18n="a2">Yes. We can support your team on specific tasks, or take on the remaining work.</p></details>
+          <details><summary data-i18n="q3">Who owns the result?</summary><p data-i18n="a3">You do. All source code, schematics and design files are handed over to you.</p></details>
+          <details><summary data-i18n="q4">How is the price decided?</summary><p data-i18n="a4">After the first call you receive a written proposal: a fixed price for each stage, or billing by time spent if the scope is still open.</p></details>
+          <details><summary data-i18n="q5">What happens after the product launches?</summary><p data-i18n="a5">We can host and maintain the update and monitoring systems, and keep improving your device's software.</p></details>
+        </div>
+      </div>
+    </section>
+
     <!-- CONTACT -->
-    <section class="section" id="contact">
+    <section class="section section--alt" id="contact">
       <div class="wrap contact">
         <div class="contact__intro">
           <p class="eyebrow" data-i18n="contact.eyebrow">Contact</p>
-          <h2 data-i18n="contact.title">Request a quote.</h2>
-          <p class="section__intro" data-i18n="contact.text">Describe the device, the current stage of the project and the support you need. We respond within two working days.</p>
+          <h2 data-i18n="contact.title">Tell us about your project.</h2>
+          <p class="section__intro" data-i18n="contact.text">Describe the problem or product and where you are now — a rough description is fine. We reply within two working days, and the first call is free.</p>
 
           <dl class="details">
             <div><dt data-i18n="contact.email">Email</dt><dd><a href="mailto:awt-barlinek@proton.me">awt-barlinek@proton.me</a></dd></div>
@@ -311,22 +365,23 @@
             </div>
           </div>
           <div class="field">
-            <label for="f-email" data-i18n="form.email">Business email</label>
+            <label for="f-email" data-i18n="form.email">Email</label>
             <input id="f-email" name="email" type="email" autocomplete="email" required>
           </div>
           <fieldset class="field">
-            <legend data-i18n="form.need">Services of interest</legend>
+            <legend data-i18n="form.need">What can we help with?</legend>
             <div class="chips">
-              <label><input type="checkbox" name="need" value="Embedded development"><span data-i18n="form.c1">Development</span></label>
+              <label><input type="checkbox" name="need" value="Whole product, end to end"><span data-i18n="form.c0">Everything, end to end</span></label>
+              <label><input type="checkbox" name="need" value="Design and development"><span data-i18n="form.c1">Design and development</span></label>
               <label><input type="checkbox" name="need" value="Device drivers"><span data-i18n="form.c6">Drivers</span></label>
-              <label><input type="checkbox" name="need" value="Production run"><span data-i18n="form.c5">Production</span></label>
               <label><input type="checkbox" name="need" value="Testing"><span data-i18n="form.c2">Testing</span></label>
-              <label><input type="checkbox" name="need" value="Update server"><span data-i18n="form.c3">OTA updates</span></label>
-              <label><input type="checkbox" name="need" value="Telemetry"><span data-i18n="form.c4">Telemetry</span></label>
+              <label><input type="checkbox" name="need" value="Production"><span data-i18n="form.c5">Production</span></label>
+              <label><input type="checkbox" name="need" value="Remote updates"><span data-i18n="form.c3">Remote updates</span></label>
+              <label><input type="checkbox" name="need" value="Device monitoring"><span data-i18n="form.c4">Monitoring</span></label>
             </div>
           </fieldset>
           <div class="field">
-            <label for="f-msg" data-i18n="form.msg">Project description</label>
+            <label for="f-msg" data-i18n="form.msg">What problem do you want to solve?</label>
             <textarea id="f-msg" name="message" rows="5" required></textarea>
           </div>
           <div class="form__foot">
@@ -342,17 +397,17 @@
     <div class="wrap footer__grid">
       <div class="footer__brand">
         <p class="footer__name">AWT</p>
-        <p data-i18n="footer.about">Embedded systems engineering: development, device drivers, production, testing, OTA updates and telemetry.</p>
+        <p data-i18n="footer.about">Electronic products end to end — from understanding your problem to devices working reliably in the field.</p>
       </div>
       <div>
         <p class="footer__h" data-i18n="services.eyebrow">Services</p>
         <ul>
-          <li><a href="#svc-dev" data-i18n="s1.title">Embedded development</a></li>
+          <li><a href="#svc-dev" data-i18n="s1.title">Design and development</a></li>
           <li><a href="#svc-drv" data-i18n="s6.title">Device drivers</a></li>
-          <li><a href="#svc-prod" data-i18n="s5.title">Assembly and production runs</a></li>
-          <li><a href="#svc-test" data-i18n="s2.title">Equipment and production testing</a></li>
-          <li><a href="#svc-ota" data-i18n="s3.title">Hosted update server (OTA)</a></li>
-          <li><a href="#svc-tel" data-i18n="s4.title">Telemetry hosting</a></li>
+          <li><a href="#svc-test" data-i18n="s2.title">Testing</a></li>
+          <li><a href="#svc-prod" data-i18n="s5.title">Production</a></li>
+          <li><a href="#svc-ota" data-i18n="s3.title">Remote updates</a></li>
+          <li><a href="#svc-tel" data-i18n="s4.title">Device monitoring</a></li>
         </ul>
       </div>
       <div>
@@ -366,7 +421,9 @@
     </div>
     <div class="wrap footer__base">
       <span>© <span id="year">2026</span> AWT</span>
-      <a href="#top" data-i18n="footer.top">Back to top</a>
+      <!-- Fill in before launch: registered business name, NIP and registered address (as in CEIDG/KRS). -->
+      <span class="footer__legal">[Registered business name] · NIP [0000000000] · [Street, postcode Barlinek]</span>
+      <span class="footer__links"><a href="privacy.html" data-i18n="footer.privacy">Privacy policy</a> · <a href="#top" data-i18n="footer.top">Back to top</a></span>
     </div>
   </footer>
 
