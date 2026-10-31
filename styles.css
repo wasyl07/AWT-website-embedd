@@ -200,6 +200,7 @@ a { color: inherit; }
 .case p { color: var(--ink-2); }
 .case__sector { font-size: 12px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--accent) !important; }
 .case__tech { margin-top: auto; padding-top: 16px; border-top: 1px solid var(--line); font: 400 13px/1.5 var(--mono); color: var(--muted) !important; }
+.cases > .case:not(.case--feature):last-child:nth-child(even) { grid-column: 1 / -1; }
 .case--feature { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1.6fr; gap: clamp(24px, 4vw, 56px); padding: clamp(28px, 4vw, 44px); }
 .case--feature h3 { font-size: clamp(24px, 2.4vw, 30px); margin-top: 10px; }
 .case--feature .case__body > p { font-size: 17px; }
@@ -217,18 +218,9 @@ a { color: inherit; }
 /* service pitch line */
 .service p.service__pitch { margin-top: 6px; font-size: 17px; font-weight: 500; color: var(--accent); }
 
-/* technology (collapsed, for engineers) */
-.techbox { margin-top: 40px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
-.techbox summary { cursor: pointer; padding: 18px 22px; font-weight: 500; color: var(--ink-2); list-style: none; display: flex; justify-content: space-between; gap: 16px; }
-.techbox summary::-webkit-details-marker, .faq__list summary::-webkit-details-marker { display: none; }
-.techbox summary::after, .faq__list summary::after { content: "+"; font: 500 18px/1 var(--mono); color: var(--accent); flex: none; }
-.techbox[open] summary::after, .faq__list details[open] summary::after { content: "−"; }
-.techbox summary:hover { color: var(--ink); }
-.techtable { margin: 0 22px 8px; border-top: 1px solid var(--line); }
-.techtable > div { display: grid; grid-template-columns: 220px 1fr; gap: 24px; padding: 14px 0; border-bottom: 1px solid var(--line); }
-.techtable > div:last-child { border-bottom: 0; }
-.techtable dt { font-weight: 500; }
-.techtable dd { margin: 0; color: var(--ink-2); font-family: var(--mono); font-size: 14px; padding-top: 2px; }
+.faq__list summary::-webkit-details-marker { display: none; }
+.faq__list summary::after { content: "+"; font: 500 18px/1 var(--mono); color: var(--accent); flex: none; }
+.faq__list details[open] summary::after { content: "−"; }
 
 /* faq */
 .faq { display: grid; grid-template-columns: 1fr 1.7fr; gap: clamp(32px, 6vw, 96px); align-items: start; }
@@ -311,7 +303,7 @@ input:focus, textarea:focus { outline: 2px solid var(--accent); outline-offset: 
   .strip__grid > div + div { border-top: 1px solid var(--line); }
   .service { grid-template-columns: 1fr; gap: 12px; }
   .service .deliv { grid-column: auto; }
-  .techtable > div, .details > div, .case__facts > div { grid-template-columns: 1fr; gap: 2px; }
+  .details > div, .case__facts > div { grid-template-columns: 1fr; gap: 2px; }
   .hero::before { display: none; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } body { transition: none; } }

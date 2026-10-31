@@ -24,12 +24,10 @@ Run locally:
 
 Deploy: any static host (GitHub Pages, Netlify, Cloudflare Pages, nginx).
 
+Live address: https://www.awt-embedded.com (also set in `index.html`,
+`privacy.html`, `robots.txt`, `sitemap.xml`).
+
 Before launch:
-
-- Replace every `https://YOUR-DOMAIN` with the live address
-  (`index.html`, `privacy.html`, `robots.txt`, `sitemap.xml`):
-
-      grep -rl YOUR-DOMAIN . --exclude-dir=.git | xargs sed -i 's|https://YOUR-DOMAIN|https://example.pl|g'
 
 - Fill in the business name, NIP and address in the footer of `index.html`
   and in both language versions of `privacy.html` (search for `0000000000`).
