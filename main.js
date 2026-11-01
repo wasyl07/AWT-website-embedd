@@ -37,6 +37,7 @@
 
   // Contact form → opens the visitor's mail client with a prefilled message.
   const form = document.getElementById("contact-form");
+  if (!form) return; // service pages have no form
   form.addEventListener("submit", (e) => {
     e.preventDefault();
     const fd = new FormData(form);

@@ -165,5 +165,11 @@
   "footer.about": "Kompleksowa realizacja urządzeń elektronicznych — od analizy wymagań po utrzymanie u klientów.",
   "footer.loc": "Cała Europa",
   "footer.top": "Do góry",
-  "footer.privacy": "Polityka prywatności"
+  "footer.privacy": "Polityka prywatności",
+  "s1.more": "Więcej o projektowaniu elektroniki",
+  "s6.more": "Więcej o integracji podzespołów",
+  "s2.more": "Więcej o testach produkcyjnych",
+  "s5.more": "Więcej o produkcji elektroniki",
+  "s3.more": "Więcej o zdalnych aktualizacjach (OTA)",
+  "s4.more": "Więcej o monitoringu urządzeń"
 }

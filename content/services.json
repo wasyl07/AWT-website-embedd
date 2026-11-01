@@ -1,0 +1,407 @@
+{
+  "ui": {
+    "en": {
+      "home": "Home",
+      "services": "Services",
+      "deliv": "What you get",
+      "fit": "When it helps",
+      "steps": "How it works",
+      "steps_title": "From the first call to the result.",
+      "related": "Related project",
+      "faq": "Common questions",
+      "others": "Other services",
+      "cta_title": "Tell us about your project.",
+      "cta_text": "Describe the problem or product and where you are now — a rough description is fine. We reply within two working days, and the first call is free.",
+      "cta_btn": "Send an inquiry",
+      "cta_mail": "or write to"
+    },
+    "pl": {
+      "home": "Strona główna",
+      "services": "Usługi",
+      "deliv": "Zakres usługi",
+      "fit": "Kiedy warto",
+      "steps": "Przebieg współpracy",
+      "steps_title": "Od pierwszej rozmowy do rezultatu.",
+      "related": "Przykładowa realizacja",
+      "faq": "Najczęstsze pytania",
+      "others": "Pozostałe usługi",
+      "cta_title": "Prosimy o opis projektu.",
+      "cta_text": "Wystarczy krótki opis problemu lub produktu oraz etapu, na którym znajduje się projekt. Odpowiadamy w ciągu dwóch dni roboczych, pierwsza konsultacja jest bezpłatna.",
+      "cta_btn": "Wyślij zapytanie",
+      "cta_mail": "lub napisz na adres"
+    }
+  },
+
+  "projects": {
+    "p1": {
+      "en": { "kind": "In-house product · Test equipment", "title": "ETS — our own test station",
+              "text": "A machine that checks electronics automatically: it prepares each unit, runs it through a series of checks and reports the result. We use it to test our customers' products during production." },
+      "pl": { "kind": "Produkt własny · Sprzęt testowy", "title": "ETS — własne stanowisko testowe",
+              "text": "Urządzenie do automatycznego testowania elektroniki: przygotowuje egzemplarz, przeprowadza serię testów i raportuje wynik. Wykorzystujemy je do testów produkcyjnych urządzeń naszych klientów." }
+    },
+    "p2": {
+      "en": { "kind": "Wearables", "title": "Wireless motion sensor",
+              "text": "A small battery-powered sensor that tracks movement and sends the data wirelessly to a base station, where it is shown on charts. It can receive software updates wirelessly." },
+      "pl": { "kind": "Urządzenia noszone", "title": "Bezprzewodowy czujnik ruchu",
+              "text": "Niewielki czujnik zasilany bateryjnie, który rejestruje ruch i przesyła dane bezprzewodowo do stacji bazowej, gdzie są prezentowane na wykresach. Oprogramowanie czujnika można aktualizować bezprzewodowo." }
+    },
+    "p3": {
+      "en": { "kind": "Drones", "title": "Drone flight controller",
+              "text": "Custom electronics and software that let a drone fly and steer itself." },
+      "pl": { "kind": "Drony", "title": "Kontroler lotu drona",
+              "text": "Dedykowana elektronika i oprogramowanie umożliwiające autonomiczny lot i sterowanie drona." }
+    },
+    "p5": {
+      "en": { "kind": "Industrial automation", "title": "Machine health monitoring",
+              "text": "A system that keeps an eye on factory machines, spots faults early and checks software changes before they reach the production line." },
+      "pl": { "kind": "Automatyka przemysłowa", "title": "Monitoring stanu maszyn",
+              "text": "System nadzorujący pracę maszyn produkcyjnych, wcześnie wykrywający usterki i weryfikujący zmiany oprogramowania przed wdrożeniem na linię produkcyjną." }
+    }
+  },
+
+  "services": [
+    {
+      "key": "s1",
+      "slug": { "en": "electronics-design", "pl": "projektowanie-elektroniki" },
+      "projects": ["p2", "p3"],
+      "en": {
+        "name": "Electronics and firmware design",
+        "title": "Electronics & Firmware Design and Prototyping — AWT, Poland",
+        "description": "Custom electronics and embedded firmware design, from a rough idea to a working prototype: PCB design, device software, connection to apps and the cloud. Design files and code are yours.",
+        "kicker": "Design and development",
+        "h1": "Electronics and firmware design, from an idea to a working prototype.",
+        "lede": "We design the circuit boards and the software that runs on them, and build prototypes you can test, show to investors or put in front of your first customers. You don't need a technical specification to start — we help you write one.",
+        "body": [
+          "Designing a device means getting many decisions right at once: which components to use, how the board is laid out, how the firmware behaves, how the device talks to phones, apps or the internet, and how it will later be produced and tested. We handle all of these together, so the prototype is not just a demo but a sound starting point for production.",
+          "Already have an engineering team? We can join for the parts that need extra hands or specialist experience, working with your tools and processes."
+        ],
+        "deliv": ["Requirements and technical specification", "Electronics and PCB design", "Embedded software (firmware)", "Connection to phones, apps and the cloud", "Working prototypes", "All design files, code and documentation handed over"],
+        "fit": ["You have an idea for a device but no in-house electronics team.", "Your team needs help with a difficult part of the design.", "An existing device needs a redesign, for example because a part is no longer available."],
+        "steps": [
+          ["Requirements", "We work out together what the device must do, where it will be used and what it may cost to make."],
+          ["Design", "Component choice, schematics, circuit board layout and the structure of the software."],
+          ["Prototype", "A working prototype you can test and show. We fix whatever the tests reveal."],
+          ["Ready for production", "Design files, firmware and documentation prepared so the device can be built and tested in series."]
+        ],
+        "faq": [
+          ["Do I need a technical specification?", "No. A sketch or a short description is enough. We turn it into clear requirements and a plan before anything is built."],
+          ["Who owns the design?", "You do. All schematics, circuit board files, source code and documentation are handed over to you."],
+          ["How long does a prototype take?", "It depends on the device. After the first call you receive a written plan with stages, dates and a price for each stage."]
+        ]
+      },
+      "pl": {
+        "name": "Projektowanie elektroniki i oprogramowania",
+        "title": "Projektowanie elektroniki i oprogramowania wbudowanego, prototypy — AWT",
+        "description": "Projektowanie elektroniki i oprogramowania urządzeń wbudowanych od koncepcji do działającego prototypu: projekt PCB, firmware, komunikacja z aplikacjami i chmurą. Pełne prawa do projektu po stronie klienta.",
+        "kicker": "Projektowanie i rozwój",
+        "h1": "Projektowanie elektroniki i oprogramowania wbudowanego — od koncepcji do prototypu.",
+        "lede": "Projektujemy obwody drukowane i oprogramowanie urządzeń oraz budujemy prototypy do testów, prezentacji dla inwestorów i pierwszych wdrożeń. Specyfikacja techniczna nie jest wymagana — opracowujemy ją wspólnie z klientem.",
+        "body": [
+          "Projekt urządzenia wymaga jednoczesnego podjęcia wielu decyzji: dobór komponentów, projekt płytki, działanie oprogramowania, komunikacja z telefonem, aplikacją lub internetem, a także sposób późniejszej produkcji i testowania. Prowadzimy te obszary łącznie, dzięki czemu prototyp stanowi solidną podstawę do produkcji, a nie wyłącznie demonstrację.",
+          "Wspieramy również istniejące zespoły inżynierskie w zadaniach wymagających dodatkowych zasobów lub specjalistycznego doświadczenia, z wykorzystaniem narzędzi i procesów klienta."
+        ],
+        "deliv": ["Analiza wymagań i specyfikacja techniczna", "Projektowanie elektroniki i PCB", "Oprogramowanie wbudowane (firmware)", "Komunikacja z aplikacjami mobilnymi i chmurą", "Działające prototypy", "Przekazanie pełnej dokumentacji, plików projektowych i kodu"],
+        "fit": ["Pomysł na urządzenie bez własnego zespołu elektroników.", "Zespół potrzebuje wsparcia w trudnym fragmencie projektu.", "Istniejące urządzenie wymaga przeprojektowania, np. z powodu niedostępności komponentu."],
+        "steps": [
+          ["Analiza wymagań", "Wspólnie określamy funkcje urządzenia, warunki pracy i docelowy koszt produkcji."],
+          ["Projekt", "Dobór komponentów, schematy, projekt płytki drukowanej i architektura oprogramowania."],
+          ["Prototyp", "Działający prototyp do testów i prezentacji. Usuwamy problemy wykryte w testach."],
+          ["Przygotowanie do produkcji", "Pliki projektowe, firmware i dokumentacja gotowe do produkcji i testów seryjnych."]
+        ],
+        "faq": [
+          ["Czy potrzebna jest specyfikacja techniczna?", "Nie. Wystarczy szkic lub krótki opis. Przed rozpoczęciem prac opracowujemy wymagania i plan projektu."],
+          ["Do kogo należy projekt?", "Do klienta. Przekazujemy wszystkie schematy, pliki płytek drukowanych, kod źródłowy i dokumentację."],
+          ["Ile trwa wykonanie prototypu?", "Zależy od złożoności urządzenia. Po pierwszej rozmowie klient otrzymuje pisemną ofertę z etapami, terminami i ceną każdego etapu."]
+        ]
+      }
+    },
+
+    {
+      "key": "s6",
+      "slug": { "en": "hardware-integration", "pl": "integracja-podzespolow" },
+      "projects": ["p2"],
+      "en": {
+        "name": "Sensor and module integration",
+        "title": "Sensor, Display & Wireless Module Integration — AWT",
+        "description": "Integration of sensors, displays and wireless modules into your device: drivers written for your hardware or proven ready-made solutions, tested on your device and documented.",
+        "kicker": "Making the parts work together",
+        "h1": "Sensors, displays and wireless modules working together as one device.",
+        "lede": "A device is built from many parts — sensors, screens, wireless modules. We make sure they all work together smoothly, either by building the solution for you or by using a proven ready-made one, whichever saves you more time and money.",
+        "body": [
+          "Most devices combine parts from different manufacturers. Each one needs software (a driver) to talk to the rest of the system, and getting them to cooperate reliably — timing, power use, interference — is often where projects stall.",
+          "We either write the drivers and integration code for your hardware, or select a proven ready-made solution and integrate it. Either way, everything is tested on your actual device and documented, so your team can maintain it."
+        ],
+        "options": [
+          ["Built for you", "Made to fit your hardware exactly, and the code is fully yours."],
+          ["Ready-made and proven", "We pick, buy and integrate an existing solution — faster and cheaper."]
+        ],
+        "deliv": ["Sensors, displays, wireless modules and more", "Drivers written for your hardware", "Selection of ready-made parts and software", "Tested on your actual device", "Clear documentation included"],
+        "fit": ["A new sensor or module needs to be added to an existing product.", "The parts work on their own but not together.", "A component is being replaced and the software has to follow."],
+        "steps": [
+          ["Review", "We look at your hardware, the parts involved and what they must do."],
+          ["Recommendation", "Custom or ready-made: we recommend the option that costs less overall, and explain why."],
+          ["Integration", "Drivers and integration code, tested on your device."],
+          ["Handover", "Code and documentation handed over to you or your team."]
+        ],
+        "faq": [
+          ["Can you work on hardware designed by someone else?", "Yes. We start by reviewing the existing design and documentation, then integrate the new parts into it."],
+          ["Custom or ready-made — how do you decide?", "By total cost and time: a ready-made solution is usually faster, a custom one fits better and has no licence restrictions. You get a recommendation with reasons and make the decision."],
+          ["Who owns the code?", "You do. Code written for you is handed over in full, with documentation."]
+        ]
+      },
+      "pl": {
+        "name": "Integracja podzespołów",
+        "title": "Integracja czujników, wyświetlaczy i modułów bezprzewodowych — AWT",
+        "description": "Integracja czujników, wyświetlaczy i modułów komunikacji bezprzewodowej: sterowniki dedykowane lub sprawdzone rozwiązania gotowe, weryfikowane na docelowym sprzęcie i udokumentowane.",
+        "kicker": "Integracja podzespołów",
+        "h1": "Integracja czujników, wyświetlaczy i modułów bezprzewodowych.",
+        "lede": "Integrujemy czujniki, wyświetlacze i moduły komunikacji bezprzewodowej. W zależności od kosztów i terminu opracowujemy rozwiązanie dedykowane lub wdrażamy sprawdzone rozwiązanie gotowe.",
+        "body": [
+          "Większość urządzeń łączy podzespoły różnych producentów. Każdy z nich wymaga oprogramowania (sterownika) do komunikacji z resztą systemu, a ich niezawodna współpraca — zależności czasowe, pobór energii, zakłócenia — jest częstą przyczyną opóźnień w projektach.",
+          "Opracowujemy sterowniki i kod integrujący dla konkretnego sprzętu lub dobieramy i wdrażamy sprawdzone rozwiązanie gotowe. W obu przypadkach całość jest weryfikowana na docelowym urządzeniu i dokumentowana, aby zespół klienta mógł ją dalej utrzymywać."
+        ],
+        "options": [
+          ["Rozwiązanie dedykowane", "Dopasowane do konkretnego sprzętu, z pełnymi prawami do kodu po stronie klienta."],
+          ["Rozwiązanie gotowe", "Dobór, zakup i wdrożenie istniejącego rozwiązania — szybciej i taniej."]
+        ],
+        "deliv": ["Czujniki, wyświetlacze, komunikacja bezprzewodowa", "Sterowniki dla konkretnego sprzętu", "Dobór gotowych podzespołów i oprogramowania", "Weryfikacja na docelowym sprzęcie", "Pełna dokumentacja"],
+        "fit": ["Rozbudowa istniejącego produktu o nowy czujnik lub moduł.", "Podzespoły działają osobno, lecz nie współpracują ze sobą.", "Wymiana komponentu wymaga dostosowania oprogramowania."],
+        "steps": [
+          ["Analiza", "Przegląd sprzętu, zastosowanych podzespołów i wymagań."],
+          ["Rekomendacja", "Rozwiązanie dedykowane lub gotowe — rekomendujemy wariant o niższym koszcie całkowitym, wraz z uzasadnieniem."],
+          ["Integracja", "Sterowniki i kod integrujący, weryfikowane na urządzeniu klienta."],
+          ["Przekazanie", "Kod źródłowy i dokumentacja przekazane klientowi lub jego zespołowi."]
+        ],
+        "faq": [
+          ["Czy pracujecie na sprzęcie zaprojektowanym przez inną firmę?", "Tak. Rozpoczynamy od przeglądu istniejącego projektu i dokumentacji, a następnie integrujemy nowe podzespoły."],
+          ["Rozwiązanie dedykowane czy gotowe — jak podejmowana jest decyzja?", "Na podstawie kosztu całkowitego i terminu: rozwiązanie gotowe jest zwykle szybsze, dedykowane lepiej dopasowane i wolne od ograniczeń licencyjnych. Klient otrzymuje rekomendację z uzasadnieniem i podejmuje decyzję."],
+          ["Do kogo należy kod?", "Do klienta. Kod opracowany na zlecenie jest przekazywany w całości, wraz z dokumentacją."]
+        ]
+      }
+    },
+
+    {
+      "key": "s2",
+      "slug": { "en": "production-testing", "pl": "testowanie-elektroniki" },
+      "projects": ["p1"],
+      "en": {
+        "name": "Production testing",
+        "title": "Electronics Production Testing & Test Stations — AWT",
+        "description": "End-of-line testing of electronics: test stations built for your product, every unit checked and every result recorded. For boards from any manufacturer.",
+        "kicker": "Testing",
+        "h1": "Production testing of electronics: every unit checked before it ships.",
+        "lede": "Whether we made your electronics or another factory did, we check every unit on test equipment built for your product. Each one gets a recorded pass or fail, so you know exactly what you are shipping.",
+        "body": [
+          "A fault found during production costs little. The same fault found by your customer costs a return, a repair and some of your reputation. A test station built for your product checks each unit automatically and records the result, so faulty units never leave.",
+          "Our own ETS test station is the basis for this work, so a test setup for a new product can be ready sooner. We also test durability, to see how a device holds up over long use."
+        ],
+        "deliv": ["Every unit checked", "Test equipment made for your product", "Electronics from any manufacturer", "A recorded result for every unit", "Durability testing"],
+        "fit": ["You are starting series production and need to know every unit works.", "Boards from your manufacturer arrive with faults.", "Your customers or audits require test records."],
+        "steps": [
+          ["Test plan", "We agree what must be checked on each unit, and how."],
+          ["Test station", "We prepare test equipment for your product."],
+          ["Trial run", "The tests are verified on sample units, including deliberately faulty ones."],
+          ["Testing in production", "Every unit is tested and the results are recorded and shared with you."]
+        ],
+        "faq": [
+          ["Can you test electronics you did not make?", "Yes. We test boards and devices from any manufacturer."],
+          ["What do I receive?", "A recorded pass or fail result for every unit, so you know exactly what you are shipping and can trace problems back."],
+          ["When should testing be planned?", "Ideally during design, so the board has test points and the software supports testing. Testing can also be added to an existing product."]
+        ]
+      },
+      "pl": {
+        "name": "Testy produkcyjne",
+        "title": "Testowanie elektroniki i stanowiska testowe — AWT",
+        "description": "Testy produkcyjne elektroniki: stanowiska testowe przygotowane dla danego produktu, kontrola każdego egzemplarza i rejestr wyników. Również dla elektroniki innych producentów.",
+        "kicker": "Testy",
+        "h1": "Testowanie elektroniki: kontrola każdego egzemplarza przed wysyłką.",
+        "lede": "Testujemy każdy egzemplarz na stanowisku przygotowanym dla danego produktu, również elektronikę wyprodukowaną przez inne zakłady. Wynik każdego testu jest rejestrowany.",
+        "body": [
+          "Wada wykryta podczas produkcji generuje niewielki koszt. Ta sama wada wykryta przez klienta oznacza zwrot, naprawę i utratę zaufania. Stanowisko testowe przygotowane dla danego produktu automatycznie sprawdza każdy egzemplarz i rejestruje wynik, dzięki czemu wadliwe egzemplarze nie trafiają do klientów.",
+          "Podstawą tej usługi jest nasze stanowisko testowe ETS, co skraca czas przygotowania testów dla nowego produktu. Wykonujemy również testy trwałościowe."
+        ],
+        "deliv": ["Kontrola każdego egzemplarza", "Dedykowane stanowisko testowe", "Elektronika dowolnego producenta", "Rejestr wyników testów", "Testy trwałościowe"],
+        "fit": ["Uruchomienie produkcji seryjnej wymaga pewności, że każdy egzemplarz działa.", "Płytki od producenta kontraktowego trafiają z wadami.", "Klienci lub audyty wymagają dokumentacji testów."],
+        "steps": [
+          ["Plan testów", "Ustalamy zakres i metodę kontroli każdego egzemplarza."],
+          ["Stanowisko testowe", "Przygotowujemy sprzęt testowy dla danego produktu."],
+          ["Weryfikacja", "Testy są sprawdzane na próbnych egzemplarzach, w tym celowo wadliwych."],
+          ["Testy produkcyjne", "Każdy egzemplarz jest testowany, a wyniki rejestrowane i udostępniane klientowi."]
+        ],
+        "faq": [
+          ["Czy testujecie elektronikę innych producentów?", "Tak. Testujemy płytki i urządzenia wyprodukowane przez dowolny zakład."],
+          ["Co otrzymuje klient?", "Zarejestrowany wynik testu dla każdego egzemplarza, co pozwala dokładnie określić stan wysyłanych urządzeń i odtworzyć przyczyny problemów."],
+          ["Kiedy należy zaplanować testy?", "Najlepiej na etapie projektu, aby płytka miała punkty testowe, a oprogramowanie obsługiwało tryb testowy. Testy można także wprowadzić dla istniejącego produktu."]
+        ]
+      }
+    },
+
+    {
+      "key": "s5",
+      "slug": { "en": "electronics-production", "pl": "produkcja-elektroniki" },
+      "projects": ["p1"],
+      "en": {
+        "name": "Small-series production",
+        "title": "Small-Series Electronics Production — AWT, Poland",
+        "description": "Small- and medium-series electronics production: component sourcing, assembly, software installation and testing of every unit. Delivered ready to go into your product.",
+        "kicker": "Production",
+        "h1": "Small- and medium-series electronics production.",
+        "lede": "We buy the parts, put the electronics together, install the software and test everything. You receive finished units, ready to go into your product.",
+        "body": [
+          "Moving from a working prototype to the first production batch is where many projects get stuck: components have to be sourced, boards assembled, software installed and every unit checked. We take care of all of it and deliver finished, tested units.",
+          "Because we also design and test, problems found in production are fixed in the design rather than worked around — and you deal with one supplier responsible for working devices, not just assembled boards."
+        ],
+        "deliv": ["We source all components", "Assembly and software installation", "Every unit tested", "Small and medium batches", "Delivered ready to use"],
+        "fit": ["Your prototype works and you need the first batch.", "Your volumes are too small for large factories.", "You want one supplier responsible for working units."],
+        "steps": [
+          ["Preparation", "We check the design for production and prepare the parts list."],
+          ["Sourcing", "Components are ordered; if a part is hard to get, we propose an alternative."],
+          ["Assembly", "The electronics are assembled and the software installed."],
+          ["Testing and delivery", "Every unit is tested and delivered ready to use."]
+        ],
+        "faq": [
+          ["What batch sizes do you produce?", "Small and medium batches, from pilot runs to regular production. Tell us your expected volumes and we will propose the right approach."],
+          ["Can you produce a device designed by someone else?", "Yes, given the complete design files. We review them first and point out anything that could cause problems in production."],
+          ["What if a component is unavailable?", "We propose a replacement and, if needed, adapt the design and software so production can continue."]
+        ]
+      },
+      "pl": {
+        "name": "Produkcja małoseryjna",
+        "title": "Produkcja elektroniki — serie małe i średnie — AWT",
+        "description": "Produkcja elektroniki w małych i średnich seriach: zaopatrzenie w komponenty, montaż, programowanie i test każdego egzemplarza. Dostawa urządzeń gotowych do użycia.",
+        "kicker": "Produkcja",
+        "h1": "Produkcja elektroniki w małych i średnich seriach.",
+        "lede": "Zaopatrzenie w komponenty, montaż elektroniki, programowanie i testy końcowe. Dostarczamy urządzenia gotowe do montażu w produkcie końcowym.",
+        "body": [
+          "Przejście od działającego prototypu do pierwszej serii produkcyjnej to etap, na którym wiele projektów się zatrzymuje: konieczny jest zakup komponentów, montaż płytek, programowanie i kontrola każdego egzemplarza. Realizujemy wszystkie te zadania i dostarczamy gotowe, przetestowane urządzenia.",
+          "Ponieważ projektujemy i testujemy we własnym zakresie, problemy wykryte w produkcji są usuwane w projekcie, a nie obchodzone. Klient współpracuje z jednym dostawcą odpowiedzialnym za działające urządzenia, a nie wyłącznie za zmontowane płytki."
+        ],
+        "deliv": ["Zaopatrzenie w komponenty", "Montaż i programowanie", "Test każdego egzemplarza", "Serie małe i średnie", "Dostawa gotowa do użycia"],
+        "fit": ["Prototyp działa i potrzebna jest pierwsza seria.", "Wolumen jest zbyt mały dla dużych zakładów produkcyjnych.", "Potrzebny jest jeden dostawca odpowiedzialny za działające urządzenia."],
+        "steps": [
+          ["Przygotowanie", "Weryfikacja projektu pod kątem produkcji i przygotowanie listy komponentów."],
+          ["Zaopatrzenie", "Zakup komponentów; w przypadku trudno dostępnych części proponujemy zamienniki."],
+          ["Montaż", "Montaż elektroniki i programowanie urządzeń."],
+          ["Testy i dostawa", "Test każdego egzemplarza i dostawa urządzeń gotowych do użycia."]
+        ],
+        "faq": [
+          ["Jakie wielkości serii realizujecie?", "Serie małe i średnie, od partii pilotażowych po regularną produkcję. Na podstawie planowanych wolumenów proponujemy odpowiedni model realizacji."],
+          ["Czy produkujecie urządzenia zaprojektowane przez inne firmy?", "Tak, na podstawie kompletnej dokumentacji projektowej. Przed produkcją weryfikujemy ją i wskazujemy elementy mogące powodować problemy."],
+          ["Co w przypadku niedostępności komponentu?", "Proponujemy zamiennik i w razie potrzeby dostosowujemy projekt oraz oprogramowanie, aby produkcja mogła być kontynuowana."]
+        ]
+      }
+    },
+
+    {
+      "key": "s3",
+      "slug": { "en": "ota-updates", "pl": "aktualizacje-ota" },
+      "projects": ["p2"],
+      "en": {
+        "name": "Remote updates (OTA)",
+        "title": "Remote Firmware Updates (OTA) for Devices — AWT",
+        "description": "Secure over-the-air (OTA) firmware updates for devices in the field: staged rollout, automatic rollback if an update fails, no recalls or site visits. Run and maintained by us.",
+        "kicker": "Remote updates",
+        "h1": "Remote firmware updates (OTA) for devices already in your customers' hands.",
+        "lede": "Fix bugs and add features to devices already in your customers' hands — no recalls, no site visits. Updates are secure, go out to a few devices first, and are undone automatically if something goes wrong. We run the whole system for you.",
+        "body": [
+          "Every product eventually needs a change after launch: a bug fix, a security patch, a new feature a customer asked for. Without remote updates, each change means a recall or a technician visit.",
+          "We add update support to the device's software and run the system that delivers the updates. Devices accept only genuine software from you, updates reach a small group first and then everyone, and a device that fails after an update returns to the previous version on its own."
+        ],
+        "deliv": ["No recalls or site visits", "Secure updates", "Rolled out step by step", "Automatic undo if an update fails", "Run and maintained by us"],
+        "fit": ["Fixing a bug currently means a recall or a site visit.", "You want to keep adding features after launch.", "Security issues need to be fixed quickly across all devices."],
+        "steps": [
+          ["Device support", "Update support is built into the device's software."],
+          ["Update system", "We set up the system that delivers updates and run it for you."],
+          ["Step-by-step rollout", "Each update goes to a few devices first, then to all."],
+          ["Automatic undo", "If an update fails, the device returns to the previous version."]
+        ],
+        "faq": [
+          ["Can updates be added to devices already sold?", "Often, yes — if the device can connect and has enough memory. We check your hardware first and tell you what is possible."],
+          ["What happens if an update fails?", "The device returns to the previous working version automatically, and the rollout is stopped before it reaches other devices."],
+          ["Do we need our own servers?", "No. We run and maintain the update system for you."]
+        ]
+      },
+      "pl": {
+        "name": "Zdalne aktualizacje (OTA)",
+        "title": "Zdalne aktualizacje oprogramowania urządzeń (OTA) — AWT",
+        "description": "Zabezpieczone zdalne aktualizacje oprogramowania (OTA) urządzeń pracujących u klientów: wdrażanie etapowe, automatyczne wycofanie w razie błędu, bez wycofań z rynku i wizyt serwisowych.",
+        "kicker": "Zdalne aktualizacje",
+        "h1": "Zdalne aktualizacje oprogramowania (OTA) urządzeń pracujących u klientów.",
+        "lede": "Usuwanie błędów i wprowadzanie nowych funkcji w urządzeniach pracujących u klientów, bez wycofań i wizyt serwisowych. Aktualizacje są zabezpieczone, wdrażane etapami i automatycznie wycofywane w razie błędu. Infrastrukturę utrzymujemy po naszej stronie.",
+        "body": [
+          "Każdy produkt po wprowadzeniu na rynek wymaga zmian: poprawek błędów, łatek bezpieczeństwa, nowych funkcji oczekiwanych przez klientów. Bez zdalnych aktualizacji każda zmiana oznacza wycofanie urządzeń lub wizytę serwisu.",
+          "Wprowadzamy obsługę aktualizacji do oprogramowania urządzenia i utrzymujemy system ich dystrybucji. Urządzenia akceptują wyłącznie autoryzowane oprogramowanie, aktualizacja trafia najpierw do niewielkiej grupy urządzeń, a następnie do wszystkich, a urządzenie, które nie działa poprawnie po aktualizacji, samodzielnie przywraca poprzednią wersję."
+        ],
+        "deliv": ["Bez wycofań i wizyt serwisowych", "Zabezpieczone aktualizacje", "Wdrażanie etapowe", "Automatyczne wycofanie aktualizacji", "Utrzymanie infrastruktury po naszej stronie"],
+        "fit": ["Usunięcie błędu wymaga obecnie wycofania urządzeń lub wizyty serwisu.", "Produkt ma być rozwijany po wprowadzeniu na rynek.", "Luki bezpieczeństwa muszą być szybko usuwane we wszystkich urządzeniach."],
+        "steps": [
+          ["Obsługa w urządzeniu", "Mechanizm aktualizacji wbudowany w oprogramowanie urządzenia."],
+          ["System aktualizacji", "Uruchamiamy i utrzymujemy system dystrybucji aktualizacji."],
+          ["Wdrażanie etapowe", "Aktualizacja trafia najpierw do kilku urządzeń, następnie do wszystkich."],
+          ["Automatyczne wycofanie", "W razie błędu urządzenie przywraca poprzednią wersję."]
+        ],
+        "faq": [
+          ["Czy aktualizacje można wprowadzić w urządzeniach już sprzedanych?", "Często tak — jeżeli urządzenie ma łączność i wystarczającą ilość pamięci. Przed rozpoczęciem prac weryfikujemy sprzęt i określamy możliwości."],
+          ["Co w przypadku nieudanej aktualizacji?", "Urządzenie automatycznie przywraca poprzednią, działającą wersję, a wdrażanie zostaje wstrzymane przed objęciem kolejnych urządzeń."],
+          ["Czy potrzebne są własne serwery?", "Nie. System aktualizacji uruchamiamy i utrzymujemy po naszej stronie."]
+        ]
+      }
+    },
+
+    {
+      "key": "s4",
+      "slug": { "en": "device-monitoring", "pl": "monitoring-urzadzen" },
+      "projects": ["p5"],
+      "en": {
+        "name": "Device monitoring",
+        "title": "IoT Device Monitoring and Alerts — AWT",
+        "description": "Monitoring for connected devices: all devices in one view, alerts before customers notice a problem, overviews for your team, service staff or customers. Run and maintained by us.",
+        "kicker": "Device monitoring",
+        "h1": "Device monitoring: see how every device is doing, in one place.",
+        "lede": "See how all your devices are doing in one place, with alerts when something needs attention. Clear overviews can be set up for your team, your service staff or your own customers.",
+        "body": [
+          "Once devices are with customers, problems usually reach you as a complaint. Monitoring turns that around: devices report their status, and you get an alert when something looks wrong — a fault, an unusual reading, a device that has stopped reporting.",
+          "Combined with remote updates, a problem found through monitoring can often be fixed without anyone visiting the device."
+        ],
+        "deliv": ["All devices in one view", "Alerts before customers notice", "Overviews for your team or customers", "Run and maintained by us"],
+        "fit": ["You learn about faults from customer complaints.", "Service visits are expensive and often unnecessary.", "Your customers want to see the status of their devices."],
+        "steps": [
+          ["What to watch", "We agree which data and alerts matter for your product."],
+          ["Device side", "Status reporting is added to the device's software."],
+          ["Overviews and alerts", "Views and alerts are set up for your team, service staff or customers."],
+          ["Operation", "We run and maintain the system."]
+        ],
+        "faq": [
+          ["Does this work with devices you did not design?", "Usually, if the device can send data. It may need a change to its software, which we can make."],
+          ["Who can see the data?", "Only the people you give access to — your team, service staff or your customers, each with their own view."],
+          ["Do we need our own servers?", "No. We run and maintain the monitoring system for you."]
+        ]
+      },
+      "pl": {
+        "name": "Monitoring urządzeń",
+        "title": "Monitoring urządzeń IoT i powiadomienia — AWT",
+        "description": "Monitoring urządzeń podłączonych do sieci: wszystkie urządzenia w jednym panelu, powiadomienia przed zgłoszeniem klienta, widoki dla zespołu, serwisu i klientów. Utrzymanie po naszej stronie.",
+        "kicker": "Monitoring urządzeń",
+        "h1": "Monitoring urządzeń: bieżący stan wszystkich urządzeń w jednym panelu.",
+        "lede": "Stan urządzeń w jednym panelu, z powiadomieniami o zdarzeniach wymagających reakcji. Widoki dla działu technicznego, serwisu lub klientów końcowych.",
+        "body": [
+          "Gdy urządzenia trafiają do klientów, informacja o problemie zwykle przychodzi w formie reklamacji. Monitoring odwraca tę zależność: urządzenia raportują swój stan, a powiadomienie pojawia się w razie nieprawidłowości — usterki, nietypowego odczytu lub braku komunikacji.",
+          "W połączeniu ze zdalnymi aktualizacjami problem wykryty w monitoringu można często usunąć bez wizyty serwisu."
+        ],
+        "deliv": ["Wszystkie urządzenia w jednym panelu", "Powiadomienia przed zgłoszeniem klienta", "Widoki dla zespołu i klientów", "Utrzymanie po naszej stronie"],
+        "fit": ["Informacje o usterkach pochodzą z reklamacji klientów.", "Wizyty serwisowe są kosztowne i często zbędne.", "Klienci oczekują wglądu w stan swoich urządzeń."],
+        "steps": [
+          ["Zakres monitoringu", "Ustalamy, które dane i powiadomienia są istotne dla produktu."],
+          ["Urządzenie", "Raportowanie stanu wprowadzone do oprogramowania urządzenia."],
+          ["Panele i powiadomienia", "Widoki i powiadomienia dla zespołu, serwisu lub klientów."],
+          ["Utrzymanie", "Uruchamiamy i utrzymujemy system po naszej stronie."]
+        ],
+        "faq": [
+          ["Czy monitoring działa z urządzeniami zaprojektowanymi przez inne firmy?", "Zwykle tak, jeżeli urządzenie może przesyłać dane. Może być wymagana zmiana jego oprogramowania, którą realizujemy."],
+          ["Kto ma dostęp do danych?", "Wyłącznie osoby wskazane przez klienta — zespół, serwis lub klienci końcowi, każdy z własnym widokiem."],
+          ["Czy potrzebne są własne serwery?", "Nie. System monitoringu uruchamiamy i utrzymujemy po naszej stronie."]
+        ]
+      }
+    }
+  ]
+}

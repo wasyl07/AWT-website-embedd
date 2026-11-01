@@ -281,12 +281,37 @@ input:focus, textarea:focus { outline: 2px solid var(--accent); outline-offset: 
 .footer a:hover { color: var(--ink); }
 .footer__base { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 16px; padding-top: 20px; padding-bottom: 28px; border-top: 1px solid var(--line); }
 
+/* ---------- service pages ---------- */
+.service p.service__more { margin-top: 14px; }
+.service__more a { color: var(--accent); font-weight: 500; text-decoration: none; }
+.service__more a::after { content: " →"; }
+.service__more a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.hero--page .wrap { position: relative; max-width: var(--wrap); }
+.hero--page h1 { max-width: 20em; }
+.crumbs { font-size: 14px; color: var(--muted); margin-bottom: 28px; }
+.crumbs a { text-decoration: none; }
+.crumbs a:hover { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+.crumbs span[aria-hidden] { margin: 0 6px; }
+.detail { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: clamp(40px, 6vw, 96px); align-items: start; }
+.detail__body > p { font-size: 17px; color: var(--ink-2); max-width: 38em; }
+.detail__body > p + p { margin-top: 16px; }
+.detail__h { font-size: 13px !important; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+.deliv + .detail__h { margin-top: 32px; }
+.cta { display: grid; grid-template-columns: 1.4fr 1fr; gap: clamp(40px, 6vw, 96px); align-items: start; }
+.cta__alt { font-size: 14px; color: var(--muted); }
+.cta__alt a { color: var(--ink-2); }
+.related ul { border-top: 1px solid var(--ink); }
+.related li { border-bottom: 1px solid var(--line); }
+.related a { display: block; padding: 12px 0; text-decoration: none; font-weight: 500; }
+.related a:hover { color: var(--accent); }
+.footer a[aria-current="page"] { color: var(--ink); }
+
 /* ---------- responsive ---------- */
 @media (max-width: 1080px) {
   .nav { display: none; }
 }
 @media (max-width: 900px) {
-  .hero__grid, .contact, .faq, .case--feature { grid-template-columns: 1fr; }
+  .hero__grid, .contact, .faq, .case--feature, .detail, .cta { grid-template-columns: 1fr; }
   .service { grid-template-columns: 56px 1fr; }
   .service .deliv { grid-column: 2; }
   .strip__grid, .steps, .pains { grid-template-columns: 1fr 1fr; }

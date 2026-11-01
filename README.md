@@ -10,6 +10,9 @@ Static site, no build step at deploy time:
     i18n/pl.json Polish text, keyed by the `data-i18n` attributes in index.html
     pl/index.html GENERATED Polish page — do not edit by hand
     tools/build_pl.py generates pl/index.html
+    content/services.json  text of the per-service pages (EN + PL)
+    tools/build_services.py generates services/*/ (EN), pl/uslugi/*/ (PL)
+                           and sitemap.xml — do not edit those by hand
     styles.css   styles
     main.js      theme toggle, language preference, contact form
     privacy.html privacy policy (EN/PL, own small language switch)
@@ -25,6 +28,12 @@ After changing `index.html` or `i18n/pl.json`, regenerate the Polish page and
 commit both:
 
     python3 tools/build_pl.py
+    python3 tools/build_services.py   # after changing content/services.json
+
+Each service has its own page (e.g. /services/production-testing/ and
+/pl/uslugi/testowanie-elektroniki/), linked from the service blocks and footer
+on the home page. Slugs live in `content/services.json`; changing one changes
+the URL, so avoid that once the pages are indexed.
 
 The Polish page has its own title/description (in `tools/build_pl.py`), and
 both pages carry `hreflang` links so Google shows the right language.
@@ -37,7 +46,7 @@ Run locally:
 Deploy: any static host (GitHub Pages, Netlify, Cloudflare Pages, nginx).
 
 Live address: https://www.awt-embedded.com (also set in `index.html`,
-`privacy.html`, `robots.txt`, `sitemap.xml`).
+`privacy.html`, `robots.txt`, `tools/build_services.py`).
 
 Notes:
 

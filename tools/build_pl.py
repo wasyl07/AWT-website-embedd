@@ -65,6 +65,11 @@ def main() -> int:
     # Relative asset/page paths now live one level up.
     s = re.sub(r'\b(href|src)="(?!#|https?:|mailto:|tel:|/|\.\./|\./)([^"]+)"', r'\1="../\2"', s)
 
+    # Service links point to the Polish service pages (see tools/build_services.py).
+    services = json.loads((ROOT / "content" / "services.json").read_text(encoding="utf-8"))["services"]
+    for svc in services:
+        sub(rf'href="\.\./services/{svc["slug"]["en"]}/"', f'href="uslugi/{svc["slug"]["pl"]}/"', count=0)
+
     # Translate every data-i18n element (text-only content).
     seen = set()
 
