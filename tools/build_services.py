@@ -7,13 +7,22 @@ Output (do not edit by hand):
     services/<en-slug>/index.html      English pages
     pl/uslugi/<pl-slug>/index.html     Polish pages
     sitemap.xml
+    content/lastmod.json               when each page's content last changed
+
+Run tools/build_pl.py first, so the Polish home page's date is up to date.
+
+In page text, [link text](s2) links to another service page by its key.
 
 Run after changing content/services.json:
 
     python3 tools/build_services.py
 """
+import datetime
+import hashlib
 import html
 import json
+import re
+import subprocess
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -34,11 +43,71 @@ LABELS_EN = {
     "footer.top": "Back to top",
 }
 
+MONTHS_PL = ["stycznia", "lutego", "marca", "kwietnia", "maja", "czerwca", "lipca",
+             "sierpnia", "września", "października", "listopada", "grudnia"]
+UPDATED = {"en": "Last updated", "pl": "Ostatnia aktualizacja"}
+DATE_MARK = "@@DATE@@"  # replaced after hashing, so the date itself never counts as a change
+
 esc = lambda t: html.escape(t, quote=True)
+
+
+def human_date(lang, iso):
+    d = datetime.date.fromisoformat(iso)
+    if lang == "pl":
+        return f"{d.day} {MONTHS_PL[d.month - 1]} {d.year}"
+    return d.strftime("%-d %B %Y")
+
+
+def git_date(path):
+    """Date of the last commit touching path, or None."""
+    try:
+        out = subprocess.run(["git", "log", "-1", "--format=%cs", "--", path], cwd=ROOT,
+                             capture_output=True, text=True, check=True).stdout.strip()
+        return out or None
+    except (OSError, subprocess.CalledProcessError):
+        return None
+
+
+class LastMod:
+    """Keeps a content hash per page; the date moves only when the content changes."""
+
+    def __init__(self):
+        self.file = ROOT / "content" / "lastmod.json"
+        self.data = json.loads(self.file.read_text(encoding="utf-8")) if self.file.exists() else {}
+        self.today = datetime.date.today().isoformat()
+
+    def date(self, path, content):
+        h = hashlib.sha256(content.encode("utf-8")).hexdigest()[:16]
+        old = self.data.get(path)
+        if not old:
+            # First run: start from the last commit date if the file is committed unchanged.
+            committed = git_date(path)
+            on_disk = ROOT / path
+            same = committed and on_disk.exists() and on_disk.read_text(encoding="utf-8") == content
+            self.data[path] = {"hash": h, "date": committed if same else self.today}
+        elif old["hash"] != h:
+            self.data[path] = {"hash": h, "date": self.today}
+        return self.data[path]["date"]
+
+    def save(self):
+        self.file.write_text(json.dumps(self.data, indent=2, sort_keys=True) + "\n", encoding="utf-8")
 
 
 def page_path(lang, svc):
     return f"services/{svc['slug']['en']}/" if lang == "en" else f"pl/uslugi/{svc['slug']['pl']}/"
+
+
+def linkify(text, lang, data, up):
+    """Escape text and turn [label](key) into a link to that service's page."""
+    by_key = {s["key"]: s for s in data["services"]}
+
+    def a(m):
+        key = m.group(2)
+        if key not in by_key:
+            raise SystemExit(f"build_services: unknown service key '{key}' in link '{m.group(0)}'")
+        return f'<a href="{up}{page_path(lang, by_key[key])}">{m.group(1)}</a>'
+
+    return re.sub(r"\[([^\]]+)\]\((s\d+)\)", a, esc(text))
 
 
 def render(lang, svc, data, labels):
@@ -98,11 +167,13 @@ def render(lang, svc, data, labels):
     others = "\n".join(
         f'          <li><a href="{up}{page_path(lang, s)}">{esc(s[lang]["name"])}</a></li>'
         for s in data["services"] if s is not svc)
+    if "](" in c["description"] or "](" in c["title"]:
+        raise SystemExit("build_services: links are only allowed in body text")
     footer_services = "\n".join(
         f'          <li><a href="{up}{page_path(lang, s)}"'
         + (' aria-current="page"' if s is svc else "") + f'>{esc(s[lang]["name"])}</a></li>'
         for s in data["services"])
-    body = "\n".join(f"          <p>{esc(p)}</p>" for p in c["body"])
+    body = "\n".join(f"          <p>{linkify(p, lang, data, up)}</p>" for p in c["body"])
 
     return f"""<!doctype html>
 {BANNER}
@@ -196,6 +267,7 @@ def render(lang, svc, data, labels):
       <div class="wrap detail">
         <div class="detail__body">
 {body}{options}
+          <p class="updated">{UPDATED[lang]}: {DATE_MARK}</p>
         </div>
         <aside class="detail__side">
           <h2 class="detail__h">{esc(ui['deliv'])}</h2>
@@ -299,11 +371,16 @@ def render(lang, svc, data, labels):
 """
 
 
-def sitemap(data):
+def sitemap(data, dates):
     def alt(en, pl):
         return (f'    <xhtml:link rel="alternate" hreflang="en" href="{en}"/>\n'
                 f'    <xhtml:link rel="alternate" hreflang="pl" href="{pl}"/>\n'
                 f'    <xhtml:link rel="alternate" hreflang="x-default" href="{en}"/>\n')
+
+    def lm(loc):
+        path = loc[len(SITE) + 1:]
+        key = "index.html" if path == "" else path + ("index.html" if path.endswith("/") else "")
+        return f"    <lastmod>{dates[key]}</lastmod>\n" if key in dates else ""
 
     pairs = [(f"{SITE}/", f"{SITE}/pl/", "1.0")] + [
         (f"{SITE}/{page_path('en', s)}", f"{SITE}/{page_path('pl', s)}", "0.8") for s in data["services"]]
@@ -312,9 +389,10 @@ def sitemap(data):
            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">']
     for en, pl, prio in pairs:
         for loc in (en, pl):
-            out.append(f"  <url>\n    <loc>{loc}</loc>\n{alt(en, pl)}"
+            out.append(f"  <url>\n    <loc>{loc}</loc>\n{lm(loc)}{alt(en, pl)}"
                        f"    <changefreq>monthly</changefreq><priority>{prio}</priority>\n  </url>")
-    out.append(f"  <url><loc>{SITE}/privacy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>")
+    out.append(f"  <url><loc>{SITE}/privacy.html</loc>\n    {lm(SITE + '/privacy.html').strip()}\n"
+               f"    <changefreq>yearly</changefreq><priority>0.3</priority></url>")
     out.append("</urlset>\n")
     return "\n".join(out)
 
@@ -323,14 +401,24 @@ def main() -> int:
     data = json.loads((ROOT / "content" / "services.json").read_text(encoding="utf-8"))
     pl = json.loads((ROOT / "i18n" / "pl.json").read_text(encoding="utf-8"))
     labels = {"en": LABELS_EN, "pl": {k: pl[k] for k in LABELS_EN}}
+    lastmod = LastMod()
+    dates = {}
+    for path in ("index.html", "pl/index.html", "privacy.html"):
+        dates[path] = lastmod.date(path, (ROOT / path).read_text(encoding="utf-8"))
     n = 0
     for svc in data["services"]:
         for lang in ("en", "pl"):
-            out = ROOT / page_path(lang, svc) / "index.html"
+            rel = page_path(lang, svc) + "index.html"
+            page = render(lang, svc, data, labels)
+            iso = lastmod.date(rel, page)
+            dates[rel] = iso
+            page = page.replace(DATE_MARK, f'<time datetime="{iso}">{human_date(lang, iso)}</time>')
+            out = ROOT / rel
             out.parent.mkdir(parents=True, exist_ok=True)
-            out.write_text(render(lang, svc, data, labels), encoding="utf-8")
+            out.write_text(page, encoding="utf-8")
             n += 1
-    (ROOT / "sitemap.xml").write_text(sitemap(data), encoding="utf-8")
+    lastmod.save()
+    (ROOT / "sitemap.xml").write_text(sitemap(data, dates), encoding="utf-8")
     print(f"wrote {n} service pages and sitemap.xml")
     return 0
 

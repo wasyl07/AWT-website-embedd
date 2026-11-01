@@ -31,6 +31,13 @@ HEAD_PL = {
 def main() -> int:
     src = (ROOT / "index.html").read_text(encoding="utf-8")
     pl = json.loads((ROOT / "i18n" / "pl.json").read_text(encoding="utf-8"))
+    services = json.loads((ROOT / "content" / "services.json").read_text(encoding="utf-8"))["services"]
+    # Service names (svc.<key>) come from content/services.json, so they match the service pages.
+    for svc in services:
+        pl[f"svc.{svc['key']}"] = svc["pl"]["name"]
+        en = re.findall(rf'data-i18n="svc\.{svc["key"]}">([^<]*)<', src)
+        if any(html.unescape(t) != svc["en"]["name"] for t in en):
+            sys.exit(f"build_pl: svc.{svc['key']} text in index.html differs from content/services.json")
     s = src
 
     def sub(pattern, repl, count=1, flags=0):
@@ -66,7 +73,6 @@ def main() -> int:
     s = re.sub(r'\b(href|src)="(?!#|https?:|mailto:|tel:|/|\.\./|\./)([^"]+)"', r'\1="../\2"', s)
 
     # Service links point to the Polish service pages (see tools/build_services.py).
-    services = json.loads((ROOT / "content" / "services.json").read_text(encoding="utf-8"))["services"]
     for svc in services:
         sub(rf'href="\.\./services/{svc["slug"]["en"]}/"', f'href="uslugi/{svc["slug"]["pl"]}/"', count=0)
 

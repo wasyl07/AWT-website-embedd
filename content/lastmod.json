@@ -1,0 +1,62 @@
+{
+  "index.html": {
+    "date": "2026-11-01",
+    "hash": "e1642f108dd14a21"
+  },
+  "pl/index.html": {
+    "date": "2026-11-01",
+    "hash": "3bfe4ab0ef56e3d4"
+  },
+  "pl/uslugi/aktualizacje-ota/index.html": {
+    "date": "2026-11-01",
+    "hash": "75ab46404e543205"
+  },
+  "pl/uslugi/integracja-podzespolow/index.html": {
+    "date": "2026-11-01",
+    "hash": "8dfe032c257ac14f"
+  },
+  "pl/uslugi/monitoring-urzadzen/index.html": {
+    "date": "2026-11-01",
+    "hash": "6a5df00abd6750f4"
+  },
+  "pl/uslugi/produkcja-elektroniki/index.html": {
+    "date": "2026-11-01",
+    "hash": "63996f066c5d09e9"
+  },
+  "pl/uslugi/projektowanie-elektroniki/index.html": {
+    "date": "2026-11-01",
+    "hash": "41f0a3c85511d254"
+  },
+  "pl/uslugi/testowanie-elektroniki/index.html": {
+    "date": "2026-11-01",
+    "hash": "d39ad0328ac812fa"
+  },
+  "privacy.html": {
+    "date": "2026-10-31",
+    "hash": "f0ba049399cbe500"
+  },
+  "services/device-monitoring/index.html": {
+    "date": "2026-11-01",
+    "hash": "fc79178a55cf5555"
+  },
+  "services/electronics-design/index.html": {
+    "date": "2026-11-01",
+    "hash": "a4d840206e4b3acc"
+  },
+  "services/electronics-production/index.html": {
+    "date": "2026-11-01",
+    "hash": "f89d5d37e8097f21"
+  },
+  "services/hardware-integration/index.html": {
+    "date": "2026-11-01",
+    "hash": "a552a9aa4e3f15e5"
+  },
+  "services/ota-updates/index.html": {
+    "date": "2026-11-01",
+    "hash": "7b05f4420ab2b397"
+  },
+  "services/production-testing/index.html": {
+    "date": "2026-11-01",
+    "hash": "9368620996258fed"
+  }
+}

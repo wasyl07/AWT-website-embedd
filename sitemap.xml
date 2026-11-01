@@ -3,6 +3,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.awt-embedded.com/</loc>
+    <lastmod>2026-11-01</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.awt-embedded.com/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://www.awt-embedded.com/pl/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.awt-embedded.com/"/>
@@ -10,6 +11,7 @@
   </url>
   <url>
     <loc>https://www.awt-embedded.com/pl/</loc>
+    <lastmod>2026-11-01</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.awt-embedded.com/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://www.awt-embedded.com/pl/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.awt-embedded.com/"/>
@@ -17,6 +19,7 @@
   </url>
   <url>
     <loc>https://www.awt-embedded.com/services/electronics-design/</loc>
+    <lastmod>2026-11-01</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.awt-embedded.com/services/electronics-design/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://www.awt-embedded.com/pl/uslugi/projektowanie-elektroniki/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.awt-embedded.com/services/electronics-design/"/>
@@ -24,6 +27,7 @@
   </url>
   <url>
     <loc>https://www.awt-embedded.com/pl/uslugi/projektowanie-elektroniki/</loc>
+    <lastmod>2026-11-01</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.awt-embedded.com/services/electronics-design/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://www.awt-embedded.com/pl/uslugi/projektowanie-elektroniki/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.awt-embedded.com/services/electronics-design/"/>
@@ -31,6 +35,7 @@
   </url>
   <url>
     <loc>https://www.awt-embedded.com/services/hardware-integration/</loc>
+    <lastmod>2026-11-01</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.awt-embedded.com/services/hardware-integration/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://www.awt-embedded.com/pl/uslugi/integracja-podzespolow/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.awt-embedded.com/services/hardware-integration/"/>
@@ -38,6 +43,7 @@
   </url>
   <url>
     <loc>https://www.awt-embedded.com/pl/uslugi/integracja-podzespolow/</loc>
+    <lastmod>2026-11-01</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.awt-embedded.com/services/hardware-integration/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://www.awt-embedded.com/pl/uslugi/integracja-podzespolow/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.awt-embedded.com/services/hardware-integration/"/>
@@ -45,6 +51,7 @@
   </url>
   <url>
     <loc>https://www.awt-embedded.com/services/production-testing/</loc>
+    <lastmod>2026-11-01</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.awt-embedded.com/services/production-testing/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://www.awt-embedded.com/pl/uslugi/testowanie-elektroniki/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.awt-embedded.com/services/production-testing/"/>
@@ -52,6 +59,7 @@
   </url>
   <url>
     <loc>https://www.awt-embedded.com/pl/uslugi/testowanie-elektroniki/</loc>
+    <lastmod>2026-11-01</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.awt-embedded.com/services/production-testing/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://www.awt-embedded.com/pl/uslugi/testowanie-elektroniki/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.awt-embedded.com/services/production-testing/"/>
@@ -59,6 +67,7 @@
   </url>
   <url>
     <loc>https://www.awt-embedded.com/services/electronics-production/</loc>
+    <lastmod>2026-11-01</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.awt-embedded.com/services/electronics-production/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://www.awt-embedded.com/pl/uslugi/produkcja-elektroniki/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.awt-embedded.com/services/electronics-production/"/>
@@ -66,6 +75,7 @@
   </url>
   <url>
     <loc>https://www.awt-embedded.com/pl/uslugi/produkcja-elektroniki/</loc>
+    <lastmod>2026-11-01</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.awt-embedded.com/services/electronics-production/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://www.awt-embedded.com/pl/uslugi/produkcja-elektroniki/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.awt-embedded.com/services/electronics-production/"/>
@@ -73,6 +83,7 @@
   </url>
   <url>
     <loc>https://www.awt-embedded.com/services/ota-updates/</loc>
+    <lastmod>2026-11-01</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.awt-embedded.com/services/ota-updates/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://www.awt-embedded.com/pl/uslugi/aktualizacje-ota/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.awt-embedded.com/services/ota-updates/"/>
@@ -80,6 +91,7 @@
   </url>
   <url>
     <loc>https://www.awt-embedded.com/pl/uslugi/aktualizacje-ota/</loc>
+    <lastmod>2026-11-01</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.awt-embedded.com/services/ota-updates/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://www.awt-embedded.com/pl/uslugi/aktualizacje-ota/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.awt-embedded.com/services/ota-updates/"/>
@@ -87,6 +99,7 @@
   </url>
   <url>
     <loc>https://www.awt-embedded.com/services/device-monitoring/</loc>
+    <lastmod>2026-11-01</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.awt-embedded.com/services/device-monitoring/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://www.awt-embedded.com/pl/uslugi/monitoring-urzadzen/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.awt-embedded.com/services/device-monitoring/"/>
@@ -94,10 +107,13 @@
   </url>
   <url>
     <loc>https://www.awt-embedded.com/pl/uslugi/monitoring-urzadzen/</loc>
+    <lastmod>2026-11-01</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.awt-embedded.com/services/device-monitoring/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://www.awt-embedded.com/pl/uslugi/monitoring-urzadzen/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.awt-embedded.com/services/device-monitoring/"/>
     <changefreq>monthly</changefreq><priority>0.8</priority>
   </url>
-  <url><loc>https://www.awt-embedded.com/privacy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://www.awt-embedded.com/privacy.html</loc>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>yearly</changefreq><priority>0.3</priority></url>
 </urlset>

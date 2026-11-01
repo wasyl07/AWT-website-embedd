@@ -305,6 +305,12 @@ input:focus, textarea:focus { outline: 2px solid var(--accent); outline-offset: 
 .related a { display: block; padding: 12px 0; text-decoration: none; font-weight: 500; }
 .related a:hover { color: var(--accent); }
 .footer a[aria-current="page"] { color: var(--ink); }
+.detail__body > p a { color: var(--accent); text-underline-offset: 3px; }
+.detail__body > p.updated { margin-top: 28px; font-size: 14px; color: var(--muted); }
+.case__links { margin-top: auto; padding-top: 14px; font-size: 14px; }
+.case--feature .case__links { margin-top: 16px; padding-top: 0; }
+.case__links a { color: var(--accent); font-weight: 500; text-decoration: none; }
+.case__links a:hover { text-decoration: underline; text-underline-offset: 3px; }
 
 /* ---------- responsive ---------- */
 @media (max-width: 1080px) {

@@ -28,7 +28,13 @@ After changing `index.html` or `i18n/pl.json`, regenerate the Polish page and
 commit both:
 
     python3 tools/build_pl.py
-    python3 tools/build_services.py   # after changing content/services.json
+    python3 tools/build_services.py   # always run this one last
+
+`build_services.py` also writes `sitemap.xml` with a `lastmod` date per page.
+Dates live in `content/lastmod.json` and move only when a page's content
+actually changes, so commit that file too. Service pages show the same date as
+"Last updated". In `content/services.json` body text, `[text](s2)` links to
+another service page by its key.
 
 Each service has its own page (e.g. /services/production-testing/ and
 /pl/uslugi/testowanie-elektroniki/), linked from the service blocks and footer
