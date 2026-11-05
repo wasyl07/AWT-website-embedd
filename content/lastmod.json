@@ -1,62 +1,62 @@
 {
   "index.html": {
-    "date": "2026-11-01",
-    "hash": "e1642f108dd14a21"
+    "date": "2026-11-05",
+    "hash": "33963515e99e1ddd"
   },
   "pl/index.html": {
-    "date": "2026-11-01",
-    "hash": "3bfe4ab0ef56e3d4"
+    "date": "2026-11-05",
+    "hash": "70bada4b721030bd"
   },
   "pl/uslugi/aktualizacje-ota/index.html": {
-    "date": "2026-11-01",
-    "hash": "75ab46404e543205"
+    "date": "2026-11-05",
+    "hash": "fdeb4b425ceb83ac"
   },
   "pl/uslugi/integracja-podzespolow/index.html": {
-    "date": "2026-11-01",
-    "hash": "8dfe032c257ac14f"
+    "date": "2026-11-05",
+    "hash": "c7987374d44a24c3"
   },
   "pl/uslugi/monitoring-urzadzen/index.html": {
-    "date": "2026-11-01",
-    "hash": "6a5df00abd6750f4"
+    "date": "2026-11-05",
+    "hash": "be953ad0d75d8c25"
   },
   "pl/uslugi/produkcja-elektroniki/index.html": {
-    "date": "2026-11-01",
-    "hash": "63996f066c5d09e9"
+    "date": "2026-11-05",
+    "hash": "bf4d1b97a7b0f5c5"
   },
   "pl/uslugi/projektowanie-elektroniki/index.html": {
-    "date": "2026-11-01",
-    "hash": "41f0a3c85511d254"
+    "date": "2026-11-05",
+    "hash": "73a0ebabdf381aa7"
   },
   "pl/uslugi/testowanie-elektroniki/index.html": {
-    "date": "2026-11-01",
-    "hash": "d39ad0328ac812fa"
+    "date": "2026-11-05",
+    "hash": "3fa766a090e86003"
   },
   "privacy.html": {
-    "date": "2026-10-31",
-    "hash": "f0ba049399cbe500"
+    "date": "2026-11-05",
+    "hash": "735e23dd6a8d9c84"
   },
   "services/device-monitoring/index.html": {
-    "date": "2026-11-01",
-    "hash": "fc79178a55cf5555"
+    "date": "2026-11-05",
+    "hash": "6720065fc9836aac"
   },
   "services/electronics-design/index.html": {
-    "date": "2026-11-01",
-    "hash": "a4d840206e4b3acc"
+    "date": "2026-11-05",
+    "hash": "4058c868fe3b82c3"
   },
   "services/electronics-production/index.html": {
-    "date": "2026-11-01",
-    "hash": "f89d5d37e8097f21"
+    "date": "2026-11-05",
+    "hash": "a9e05420fa3e973d"
   },
   "services/hardware-integration/index.html": {
-    "date": "2026-11-01",
-    "hash": "a552a9aa4e3f15e5"
+    "date": "2026-11-05",
+    "hash": "56062a9156a7a27b"
   },
   "services/ota-updates/index.html": {
-    "date": "2026-11-01",
-    "hash": "7b05f4420ab2b397"
+    "date": "2026-11-05",
+    "hash": "edcfb066bff64809"
   },
   "services/production-testing/index.html": {
-    "date": "2026-11-01",
-    "hash": "9368620996258fed"
+    "date": "2026-11-05",
+    "hash": "56e84024990cceb6"
   }
 }

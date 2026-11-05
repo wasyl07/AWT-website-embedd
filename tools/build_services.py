@@ -27,7 +27,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 SITE = "https://www.awt-embedded.com"
-EMAIL = "awt-barlinek@proton.me"
+EMAIL = "adam@awt-embedded.com"
 PHONE = "+48669160010"
 PHONE_TXT = "+48 669 160 010"
 

@@ -1,6 +1,6 @@
 // AWT website — theme toggle, language preference and contact form.
 (() => {
-  const EMAIL = "awt-barlinek@proton.me";
+  const EMAIL = "adam@awt-embedded.com";
 
   const MSG = {
     en: { missing: "Please provide your name, a valid email address and a project description.",
