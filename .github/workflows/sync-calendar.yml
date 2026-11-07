@@ -1,0 +1,69 @@
+name: Sync calendar
+
+on:
+  schedule:
+    - cron: "17 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: sync-calendar
+
+env:
+  FASTMAIL_ICS_URL: ${{ secrets.FASTMAIL_ICS_URL }}
+
+jobs:
+  sync:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Check the calendar link is configured
+        id: check
+        run: |
+          if [ -z "$FASTMAIL_ICS_URL" ]; then
+            echo "::notice::Add the FASTMAIL_ICS_URL repository secret to enable the calendar."
+            echo "configured=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "configured=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/checkout@v4
+        if: steps.check.outputs.configured == 'true'
+
+      - uses: actions/setup-python@v5
+        if: steps.check.outputs.configured == 'true'
+        with:
+          python-version: "3.12"
+
+      - name: Update free times
+        if: steps.check.outputs.configured == 'true'
+        run: |
+          pip install --quiet -r tools/requirements-calendar.txt
+          python3 tools/sync_calendar.py
+
+      - name: Publish if anything changed
+        id: publish
+        if: steps.check.outputs.configured == 'true'
+        run: |
+          git add data/slots.json
+          if git diff --cached --quiet; then
+            echo "No change in availability."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Update available call times"
+          git pull --rebase origin main
+          git push origin HEAD:main
+          echo "pushed=true" >> "$GITHUB_OUTPUT"
+
+      # Pushes made with the workflow token may not start a Pages build by themselves.
+      - name: Request a Pages build
+        if: steps.publish.outputs.pushed == 'true'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method POST "repos/$GITHUB_REPOSITORY/pages/builds" --silent

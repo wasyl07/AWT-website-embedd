@@ -1,0 +1,10 @@
+{
+  "timezone": "Europe/Warsaw",
+  "weekdays": [1, 2, 3, 4, 5],
+  "day_start": "09:00",
+  "day_end": "16:00",
+  "slot_minutes": 30,
+  "buffer_minutes": 15,
+  "notice_hours": 48,
+  "horizon_days": 28
+}

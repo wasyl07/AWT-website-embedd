@@ -397,6 +397,21 @@
               <label><input type="checkbox" name="need" value="Device monitoring"><span data-i18n="form.c4">Monitoring</span></label>
             </div>
           </fieldset>
+          <!-- Shown by main.js only when up-to-date times are available in data/slots.json. -->
+          <fieldset class="field" id="slot-picker" hidden>
+            <legend data-i18n="form.slot">Preferred call time (optional)</legend>
+            <p class="cal__hint" data-i18n="form.sloth">Times are in your local time zone. We confirm the time by email.</p>
+            <div class="cal">
+              <div class="cal__head">
+                <button class="cal__nav" type="button" id="cal-prev">‹</button>
+                <p class="cal__month" id="cal-month" aria-live="polite"></p>
+                <button class="cal__nav" type="button" id="cal-next">›</button>
+              </div>
+              <div class="cal__grid" id="cal-grid"></div>
+              <div class="cal__times" id="cal-times"></div>
+              <p class="cal__chosen" id="cal-chosen" role="status" aria-live="polite"></p>
+            </div>
+          </fieldset>
           <div class="field">
             <label for="f-msg" data-i18n="form.msg">What problem do you want to solve?</label>
             <textarea id="f-msg" name="message" rows="5" required></textarea>
