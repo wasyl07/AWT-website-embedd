@@ -3,11 +3,11 @@
   const EMAIL = "adam@awt-embedded.com";
 
   const MSG = {
-    en: { missing: "Please provide your name, a valid email address and a project description.",
+    en: { missing: "Please provide your name and a valid email address.",
           opened: "Your email app should open with the message ready. If it doesn't, write to " + EMAIL + ".",
           dark: "Switch to dark mode", light: "Switch to light mode",
           prev: "Previous month", next: "Next month", chosen: "Selected:" },
-    pl: { missing: "Prosimy podać imię i nazwisko, poprawny adres e-mail oraz opis projektu.",
+    pl: { missing: "Prosimy podać imię i nazwisko oraz poprawny adres e-mail.",
           opened: "Program pocztowy powinien otworzyć się z gotową wiadomością. Jeśli tak się nie stało, prosimy o kontakt: " + EMAIL + ".",
           dark: "Włącz tryb ciemny", light: "Włącz tryb jasny",
           prev: "Poprzedni miesiąc", next: "Następny miesiąc", chosen: "Wybrany termin:" },
@@ -161,14 +161,12 @@
     const fd = new FormData(form);
     const name = (fd.get("name") || "").toString().trim();
     const email = (fd.get("email") || "").toString().trim();
-    const message = (fd.get("message") || "").toString().trim();
     const company = (fd.get("company") || "").toString().trim();
     const needs = fd.getAll("need").join(", ");
 
     const checks = [
       ["f-name", name.length > 0],
       ["f-email", /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)],
-      ["f-msg", message.length > 0],
     ];
     let ok = true;
     checks.forEach(([id, valid]) => {
@@ -178,7 +176,7 @@
     if (!ok) { note.textContent = MSG[lang].missing; return; }
 
     const subject = `Quote request — ${company || name}${needs ? " (" + needs + ")" : ""}`;
-    const body = `Name: ${name}\nCompany: ${company || "-"}\nEmail: ${email}\nServices: ${needs || "-"}\n${preferredCall ? `Preferred call: ${preferredCall}\n` : ""}\n${message}\n`;
+    const body = `Name: ${name}\nCompany: ${company || "-"}\nEmail: ${email}\nServices: ${needs || "-"}\n${preferredCall ? `Preferred call: ${preferredCall}\n` : ""}\n`;
     window.location.href = `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     note.textContent = MSG[lang].opened;
   });

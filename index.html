@@ -399,7 +399,7 @@
           </fieldset>
           <!-- Shown by main.js only when up-to-date times are available in data/slots.json. -->
           <fieldset class="field" id="slot-picker" hidden>
-            <legend data-i18n="form.slot">Preferred call time (optional)</legend>
+            <legend data-i18n="form.slot">Schedule a call (optional)</legend>
             <p class="cal__hint" data-i18n="form.sloth">Times are in your local time zone. We confirm the time by email.</p>
             <div class="cal">
               <div class="cal__head">
@@ -412,10 +412,6 @@
               <p class="cal__chosen" id="cal-chosen" role="status" aria-live="polite"></p>
             </div>
           </fieldset>
-          <div class="field">
-            <label for="f-msg" data-i18n="form.msg">What problem do you want to solve?</label>
-            <textarea id="f-msg" name="message" rows="5" required></textarea>
-          </div>
           <div class="form__foot">
             <button class="btn btn--primary" type="submit" data-i18n="form.send">Send inquiry</button>
             <p class="form__note" id="form-note" role="status" aria-live="polite"></p>
