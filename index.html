@@ -397,21 +397,6 @@
               <label><input type="checkbox" name="need" value="Device monitoring"><span data-i18n="form.c4">Monitoring</span></label>
             </div>
           </fieldset>
-          <!-- Shown by main.js only when up-to-date times are available in data/slots.json. -->
-          <fieldset class="field" id="slot-picker" hidden>
-            <legend data-i18n="form.slot">Schedule a call (optional)</legend>
-            <p class="cal__hint" data-i18n="form.sloth">Times are in your local time zone. We confirm the time by email.</p>
-            <div class="cal">
-              <div class="cal__head">
-                <button class="cal__nav" type="button" id="cal-prev">‹</button>
-                <p class="cal__month" id="cal-month" aria-live="polite"></p>
-                <button class="cal__nav" type="button" id="cal-next">›</button>
-              </div>
-              <div class="cal__grid" id="cal-grid"></div>
-              <div class="cal__times" id="cal-times"></div>
-              <p class="cal__chosen" id="cal-chosen" role="status" aria-live="polite"></p>
-            </div>
-          </fieldset>
           <div class="form__foot">
             <button class="btn btn--primary" type="submit" data-i18n="form.send">Send inquiry</button>
             <p class="form__note" id="form-note" role="status" aria-live="polite"></p>

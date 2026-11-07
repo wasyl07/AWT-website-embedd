@@ -24,29 +24,6 @@ Static site, no build step at deploy time:
 The contact form opens the visitor's mail client with a prefilled message to
 the address in `main.js` (`EMAIL`) — no backend needed.
 
-## Call time calendar
-
-The form can show free call times from Fastmail. A visitor's choice is only a
-request: it is added to the email, and you confirm by sending an invite from
-Fastmail, which is what puts it on your calendar.
-
-    content/calendar.json   bookable days, hours, slot length, buffer and notice
-    tools/sync_calendar.py  reads the Fastmail link, writes data/slots.json
-    data/slots.json         GENERATED free times — do not edit by hand
-    .github/workflows/sync-calendar.yml  runs the sync about hourly
-
-Setup: in Fastmail, open Settings → Calendars → Edit & share and create a
-free/busy link. In GitHub, add it as the repository secret `FASTMAIL_ICS_URL`
-(Settings → Secrets and variables → Actions), then run "Sync calendar" from the
-Actions tab.
-
-Without a recent `data/slots.json` (3 days or older) the calendar stays hidden
-and the form works as before. To block time, add an event in Fastmail, including
-all-day events for holidays. Events marked "free" do not block anything.
-
-Test: `pip install -r tools/requirements-calendar.txt`, then
-`python3 tools/test_sync_calendar.py`.
-
 After changing `index.html` or `i18n/pl.json`, regenerate the Polish page and
 commit both:
 
